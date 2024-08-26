@@ -1,0 +1,61 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #0F0F0F;
+  color: #fff;
+  font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+#loader {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #111111;
+  z-index: 9999;
+  transition: opacity 0.5s ease-out; 
+}
+
+#loader div {
+  background-color: #C93131;
+  height: 40px; 
+  width: 10px; 
+  margin: 2px;
+  border-radius: 15px; 
+  animation: loaderAnimation 1.8s infinite ease-in-out; 
+}
+
+#loader .rect2 {
+  animation-delay: -1.6s;
+}
+
+#loader .rect3 {
+  animation-delay: -1.4s;
+}
+
+#loader .rect4 {
+  animation-delay: -1.2s;
+}
+
+#loader .rect5 {
+  animation-delay: -1.0s;
+}
+
+@keyframes loaderAnimation {
+  0%, 40%, 100% { transform: scaleY(0.4); }  
+  20% { transform: scaleY(1.0); }
+}
+
+#content {
+  display: none;
+}
+
+.fade-out {
+  opacity: 0; 
+  pointer-events: none; 
+}

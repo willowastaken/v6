@@ -1,0 +1,19 @@
+.link-text {
+  color: #D6D6D6;
+  font-weight: bold;
+  margin-top: -10px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.link-text:hover {
+  color: #969393;
+}
+
+.link-text:active {
+  color: #C93131; 
+}
+
+p {
+font-weight: bold;
+}

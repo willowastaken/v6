@@ -1,0 +1,50 @@
+.title {
+font-size: 2.1em;
+font-weight: bold;
+margin-bottom: 10px;
+white-space: nowrap;
+overflow: hidden;
+border-right: .15em solid #ffffff;
+width: 17ch;
+animation: typing 2s steps(17, end), blink-caret .75s step-end infinite;
+margin: 0 auto;
+}
+
+.subtitle {
+font-size: 1.21em;
+font-weight: normal;
+margin-bottom: 31px;
+}
+
+.home-button {
+background-color: #C93131;
+color: #ffffff;
+padding: 12px 22px;
+text-decoration: none;
+border-radius: 5px;
+font-size: 0.92em;
+transition: background-color 0.5s ease;
+}
+
+.home-button:hover {
+background-color: #a02929;
+}
+
+.home-button i {
+margin-right: 5px;
+}
+
+@keyframes typing {
+from { width: 0; }
+to { width: 17ch; }
+}
+
+@keyframes blink-caret {
+from, to { border-color: transparent; }
+50% { border-color: #ffffff; }
+}
+
+b {
+ font-size: 14px; 
+ margin-right: 47%;
+}

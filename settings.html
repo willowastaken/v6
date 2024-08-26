@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLEXILE ARCADE | Settings</title>
+    <link rel="icon" type="image/png" href="/images/plexilearcade.png">
+    <meta property="og:title" content="PLEXILE ARCADE">
+    <meta name="theme-color" content="#C93131">
+    <meta name="msapplication-TileColor" content="#C93131">
+    <meta property="og:image" content="/images/plexilearcade.png">
+    <meta name="description" content="The Next Generation Of Unblocked Sites...">
+    <meta property="og:description" content="The Next Generation Of Unblocked Sites...">
+    <link rel="icon" type="image/png" href="/images/plexilearcade.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/loader.css">
+    <link rel="stylesheet" href="/css/settings.css"
+
+</head>
+<body>
+    <style>
+        .sidebar-icon.cog-icon {
+          color: #fff; 
+        }
+
+        .sidebar-icon.cog-icon::before {
+            color: #fff;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 95%;
+            height: 100%;
+            border-left: 3px solid #C93131; 
+            background-color: #333232; 
+            opacity: 1; 
+            z-index: -1; 
+        }
+    </style>
+    
+    <div id="loader">
+        <div class="rect1"></div>
+        <div class="rect2"></div>
+        <div class="rect3"></div>
+        <div class="rect4"></div>
+        <div class="rect5"></div>
+    </div>
+
+    <div id="notification" class="notification">Settings Applied!</div>
+    
+    <div class="sidebar">
+        <a href="/" class="sidebar-icon home-icon"><i class="bx bx-home-alt icon"></i></a>
+        <a href="/games.html" class="sidebar-icon games-icon"><i class="bx bx-joystick icon"></i></a>
+        <a href="/apps.html" class="sidebar-icon dots-icon"><i class="bx bx-grid-alt icon"></i></a>
+        <a href="/search.html" class="sidebar-icon search-icon"><i class="bx bx-search icon"></i></a>
+        <a href="/links.html" class="sidebar-icon links-icon"><i class="bx bx-link-alt icon"></i></a>
+        <a href="/settings.html" class="sidebar-icon cog-icon"><i class="bx bx-cog icon"></i></a>
+    </div>
+
+    <div class="main-content">
+        <div class="box-container">
+        <div class="box">
+          <br>
+      <center><h2>About:Blank</h2></center>
+            <br>
+    <center><p>Hides your history & Prevents extensions of seeing what your doing.</p></center>
+
+          <script>
+              var url = "/settings.html";
+              var win;
+
+              function openWindow() {
+                  if (win) {
+                      win.focus();
+                  } else {
+                      win = window.open('', '_blank');
+                      win.document.body.style.margin = '0';
+                      win.document.body.style.height = '100vh';
+                      var iframe = win.document.createElement('iframe');
+                      iframe.style.border = 'none';
+                      iframe.style.width = '100%';
+                      iframe.style.height = '100%';
+                      iframe.src = url;
+                      win.document.body.appendChild(iframe);
+                  }
+              }
+
+              document.addEventListener('DOMContentLoaded', function() {
+                  var switchInput = document.querySelector('.switch input[type="checkbox"]');
+
+                  switchInput.addEventListener('change', function() {
+                      if (this.checked) {
+                          openWindow();
+                      }
+                  });
+              });
+          </script>
+
+          <label class="switch">
+              <input type="checkbox">
+              <span class="slider round"></span>
+          </label>
+
+       </div>
+        <div class="box">
+          <br>
+          <center><h2>Tab Cloak</h2></center>
+            <br>
+          <center><p>Disguises your tab to look just like a educational site.</p></center>
+
+          <div class="image-container">
+                  <div class="image-box" onclick="handleClick(this, 'Schoology', '/images/settings-images/schoologyLogo.png')">
+                      <img src="/images/settings-images/schoologyLogo.png" alt="schoology">
+                  </div>
+                  <div class="image-box" onclick="handleClick(this, 'Google Classroom', '/images/settings-images/GoogleClassroom.png')">
+                      <img src="/images/settings-images/GoogleClassroom.png" alt="google classroom">
+                  </div>
+                <div class="image-box" onclick="handleClick(this, 'Google Slides', '/images/settings-images/googleslides.ico')">
+                      <img src="/images/settings-images/googleslides.ico" alt="google slides">
+                  </div>
+                <div class="image-box" onclick="handleClick(this, 'Google Drive', '/images/settings-images/GoogleDrive.png')">
+                      <img src="/images/settings-images/GoogleDrive.png" alt="google drive">
+                  </div>
+                  <div class="image-box" onclick="resetCloak()">
+                      <img src="/images/settings-images/reset-icon.png" alt="Reset Icon">
+                  </div>
+          </div>
+        </div>
+        <div class="box">
+          <br>
+          <center><h2>Anti-Closing</h2></center>
+            <br>
+          <center><p>Prevents extensions from closing your tab with the "Leave Site?" popup.</p></center>
+
+          <label class="switch">
+              <input type="checkbox" id="toggleLeavePopup">
+              <span class="slider round"></span>
+          </label>
+        </div>
+
+        <div class="box2">
+          <br>
+          <center><h2>Panic Key</span></h2></center>
+            <br>
+          <center><p>Redirects you to a educational website whenever a certain key is pressed.</p></center>
+
+        <center>
+         <div class="buttoncontainer">
+        <button2 onclick="openPopup()">Set Panic Key</button2>
+        <span id="panicKeyDisplay"></span>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+
+    <div class="search-popup" id="popup">
+        <center><b>Set Panic Key</b></center><br>
+        <input type="text" id="panicKeyInput" class="popup-input" placeholder="Enter Panic Key" maxlength="1">
+        <br>
+        <input type="text" id="urlInput" class="popup-input" placeholder="Enter URL">
+
+        <div class="popup-buttons">
+            <button onclick="savePanicKey()" class="popup-button">Save</button>
+            <button onclick="closePopup()" class="popup-button">Cancel</button>
+
+        </div>
+        </div>
+          </div>
+        <div class="box">
+
+          <br><br>
+          <center><h2>Themes</h2></center>
+            <br>
+          <center><p>I'm sorry but this feature is currently unavailable right now,<br>But It will be avaliable soon.</p></center>
+            <br>
+        </div>
+
+        <div class="box">
+          <br>
+          <center><h2>Clickoff Cloaking</h2></center>
+            <br>
+          <center><p>Cloaks the tab whenever its clicked off of.</p></center>
+          <label class="switch">
+              <input type="checkbox" id="toggleTitleAndFavicon">
+              <span class="slider round"></span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <br>
+            <script>
+                function showNotification() {
+                    const notification = document.getElementById('notification');
+                    notification.style.right = "20px"; 
+                    notification.classList.add('show', 'shake'); 
+
+                    setTimeout(() => {
+                        notification.style.right = "-300px"; 
+                        notification.classList.remove('show', 'shake');
+                    }, 2200); 
+                }
+
+                function savePanicKey() {
+                    const panicKey = document.getElementById("panicKeyInput").value;
+                    const url = document.getElementById("urlInput").value;
+
+                    closePopup();
+                    showNotification();
+                }
+
+                document.addEventListener('DOMContentLoaded', function() {
+                    const switchInputs = document.querySelectorAll('.switch input[type="checkbox"]');
+                    const imageBoxes = document.querySelectorAll('.image-box');
+                    const panicKeySaveButton = document.querySelector('.popup-button.save-button');
+
+                    switchInputs.forEach(input => {
+                        input.addEventListener('change', showNotification);
+                    });
+
+                    imageBoxes.forEach(box => {
+                        box.addEventListener('click', showNotification);
+                    });
+
+                    if (panicKeySaveButton) {
+                        panicKeySaveButton.addEventListener('click', showNotification);
+                    }
+                });
+
+            </script>
+
+            <!-- Scripts -->
+            <script src="/js/main.js"></script>
+            <script src="/js/loader.js"></script>
+            <script src="/js/highlight.js" defer></script>
+            <script src="/js/settings/anticlosing.js"></script>
+            <script src="/js/settings/clickoffcloaking.js"></script>
+            <script src="/js/settings/tabcloak.js" defer></script>
+            <script src="/js/settings/panic.js"></script>
+            <script src="/js/settings/mobile.js"></script>
+            <script src="/js/settings/themes.js" defer></script>
+            </body>
+            </html>
