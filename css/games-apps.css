@@ -57,7 +57,7 @@ fill: white;
 .box {
   display: inline-block;
   position: relative;
-  width: 220px;
+  width: 225px;
   height: 130px;
   border-radius: 8px;
   overflow: hidden;
