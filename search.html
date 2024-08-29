@@ -21,12 +21,24 @@
     <!-- CSS -->
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/loader.css">
-    <link rel="stylesheet" href="/css/search.css"
+    <link rel="stylesheet" href="/css/search.css">
 
 </head>
 <body>
 
     <style>
+        * {
+            margin:0;
+            padding:0;
+        }
+        .icons {
+            font-size:24px;
+            text-decoration: none;
+        }
+        .icons a {
+            color:white;
+            margin:15px;
+        }
         .sidebar-icon.ssearch-icon {
           color: #fff; 
         }
@@ -63,55 +75,23 @@
         <a href="/settings.html" class="sidebar-icon cog-icon"><i class="bx bx-cog icon"></i></a>
     </div>
 
-    <br><br><br><br><br><br><br><br><br>
 
     </head>
     <body>
-    <div class="container">
-
-        <center>
-            <h1 id="timeDisplay" style="color: #C93131;">TIME HERE</h1>
-        </center>
-        <br>
-
-        <center>
-        <form action="search_results.html" method="GET" class="search-container">
-            <div class="search-wrapper">
-                <i class="fas fa-search search-icon"></i>
-                <input type="text" name="q" class="search-bar" placeholder="Search Google or type a URL" onkeydown="handleKeyPress(event)">
-            </div>
-        </form>
-            </center>
-
-        <div class="circle-container">
-            <a href="linkhere" class="circle">
-                <img src="/images/proxy-images/nowgg.png" alt="now.gg">
-                <div class="circle-text">now.gg</div>
-            </a>
-            <a href="linkhere" class="circle">
-                <img src="/images/proxy-images/google.png" alt="Google">
-                <div class="circle-text">Google</div>
-            </a>
-            <a href="linkhere" class="circle">
-                <img src="/images/proxy-images/discord.png" alt="Discord">
-                <div class="circle-text">Discord</div>
-            </a>
-            <a href="linkhere" class="circle">
-                <img src="/images/proxy-images/github.png" alt="Github">
-                <div class="circle-text">Github</div>
-            </a>
-            <a href="linkhere" class="circle">
-                <img src="/images/proxy-images/youtube.png" alt="Youtube">
-                <div class="circle-text">YT</div>
-            </a>
-            <a  class="circle">
-                <img src="/images/proxy-images/add.png" alt="Add Shortcut">
-                <div class="circle-text">Add</div>
-            </a>
-        </div>
-    </div>
-
-    <!-- Scripts -->
+<center>
+        <iframe id="frameWeb" style=" width: 90%; height: 90vh; border: none;" src="/static/"></iframe>
+    </center>
+    <center>
+        <div class="icons">
+    <a href="#" onclick="back()"><i class="fa-thin fa-chevron-left"></i></a>
+    <a href="#" onclick="reload()"><i class="fa-thin fa-rotate"></i></a>
+    <a href="#" onclick="back()"><i class="fa-thin fa-chevron-right"></i></a>
+    <a href="#" onclick="inspect()"><i class="fa-thin fa-code"></i></a>
+    <a href="#" id="openIframeContent"><i class="fa-thin fa-up-right-from-square"></i></a>
+    <a href="#" onclick="toggleFullscreen()"><i class="fa-thin fa-maximize"></i></a>
+</div>
+</center>
+   <!-- Scripts -->
     <script src="/js/main.js"></script>
     <script src="/js/loader.js"></script>
     <script src="/js/highlight.js" defer></script>
@@ -125,5 +105,66 @@
         <script src="/js/settings/panic.js"></script>
         <script src="/js/settings/mobile.js"></script>
         <script src="/js/settings/themes.js" defer></script>
+        <script>
+        function reload() {
+var web = document.getElementById("frameWeb");
+web.contentWindow.location.reload();
+}
+function back() {
+var iframe = document.getElementById('frameWeb');
+iframe.contentWindow.history.back();
+}
+
+function foward() {
+var iframe = document.getElementById('frameWeb');
+iframe.contentWindow.history.forward();
+}
+function inspect() {
+const proccy = document.getElementById("frameWeb");
+if (!proccy) return;
+
+const proccyWindow = proccy.contentWindow;
+const proccyDocument = proccy.contentDocument;
+
+if (!proccyWindow || !proccyDocument) return;
+
+if (proccyWindow.eruda?._isInit) {
+proccyWindow.eruda.destroy();
+} else {
+let script = proccyDocument.createElement("script");
+script.src = "https://cdn.jsdelivr.net/npm/eruda";
+script.onload = function () {
+if (!proccyWindow) return;
+proccyWindow.eruda.init();
+proccyWindow.eruda.show();
+};
+proccyDocument.head.appendChild(script);
+}
+}
+function toggleFullscreen() {
+      let elem = document.querySelector("#frameWeb");
+
+      if (!document.fullscreenElement) {
+        elem.requestFullscreen().catch((err) => {
+          alert(
+            `Error attempting to enable fullscreen mode: ${err.message} (${err.name})`
+          );
+        });
+      } else {
+        document.exitFullscreen();
+      }
+    }
+        </script>
+        <script>
+             document.getElementById('openIframeContent').addEventListener('click', function() {
+            var iframe = document.getElementById('frameWeb');
+            var iframeContent = iframe.contentWindow ? iframe.contentWindow.document.documentElement.outerHTML : "";
+
+            var newWindow = window.open('about:blank', '_blank');
+            newWindow.document.open();
+            newWindow.document.write(iframeContent);
+            newWindow.document.close();
+        });
+        </script>
 </body>
 </html>

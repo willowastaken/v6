@@ -53,19 +53,8 @@
         <div class="rect5"></div>
     </div>
 
-    <div class="sidebar">
-        <a href="/" class="sidebar-icon home-icon"><i class="bx bx-home-alt icon"></i></a>
-        <a href="/games.html" class="sidebar-icon games-icon"><i class="bx bx-joystick icon"></i></a>
-        <a href="/apps.html" class="sidebar-icon dots-icon"><i class="bx bx-grid-alt icon"></i></a>
-        <a href="/search.html" class="sidebar-icon ssearch-icon"><i class="bx bx-search icon"></i></a>
-        <a href="/links.html" class="sidebar-icon links-icon"><i class="bx bx-link-alt icon"></i></a>
-        <a href="/settings.html" class="sidebar-icon cog-icon"><i class="bx bx-cog icon"></i></a>
-    </div>
-
-    <br><br><br><br><br><br><br><br><br>
-
     </head>
-    <body>
+    <body style="overflow:hidden;">
     <div class="container">
 
         <center>
@@ -75,7 +64,6 @@
 
         <center>
           <form id="uv-form">
-            <i class="fas fa-search search-icon"></i>
             <input id="uv-search-engine" value="https://www.google.com/search?q=%s" type="hidden"/> 
             <input id="uv-address" class="search-bar" type="text" placeholder="Search Google or type an URL" class="form__input"/>
           </form>
@@ -86,32 +74,43 @@
       </div>
             </center>
 
-        <div class="circle-container">
-            <a href="linkhere" class="circle">
+            <div class="circle-container">
+            <a href="/static/embed.html#https://shuttle.lol" class="circle">
                 <img src="/images/proxy-images/nowgg.png" alt="now.gg">
                 <div class="circle-text">now.gg</div>
             </a>
-            <a href="linkhere" class="circle">
+            <a href="/static/embed.html#https://google.com" class="circle">
                 <img src="/images/proxy-images/google.png" alt="Google">
                 <div class="circle-text">Google</div>
             </a>
-            <a href="linkhere" class="circle">
+            <a href="/static/embed.html#https://discord.com" class="circle">
                 <img src="/images/proxy-images/discord.png" alt="Discord">
                 <div class="circle-text">Discord</div>
             </a>
-            <a href="linkhere" class="circle">
+            <a href="/static/embed.html#https://github.com" class="circle">
                 <img src="/images/proxy-images/github.png" alt="Github">
                 <div class="circle-text">Github</div>
             </a>
-            <a href="linkhere" class="circle">
+            <a href="/static/embed.html#https://youtube.com" class="circle">
                 <img src="/images/proxy-images/youtube.png" alt="Youtube">
+                <center>
                 <div class="circle-text">YT</div>
+            </center>
             </a>
-            <a  class="circle">
+            <a href="/static/embed.html#https://yewtu.be" class="circle">
+                <img src="/images/proxy-images/iv.png" alt="Invidious (youtube alternative)">
+                <div class="circle-text">IV</div>
+            </a>
+            <a onclick="add()" class="circle">
                 <img src="/images/proxy-images/add.png" alt="Add Shortcut">
                 <div class="circle-text">Add</div>
             </a>
-        </div>
+            <a onclick="remove()" class="circle">
+                <img src="/images/proxy-images/remove.png" alt="Remove Shortcut">
+                <div class="circle-text">Remove</div>
+            </a>
+            </div>
+            <div class="circle-container" id="shortcuts"></div>
     </div>
 
     <!-- Scripts -->
@@ -136,4 +135,77 @@
         <script src="/static/index.js" defer></script>
         <script src="/static/error.js" defer></script>
 </body>
+<script>
+function add() {
+    let link = prompt("Enter the link (must start with https://)");
+    if (!link.startsWith('https://')) {
+        link = 'https://' + link;
+    }
+
+    const imageLink = prompt("Enter the image link");
+    const name = prompt("Enter the name");
+
+    const shortcut = document.createElement('a');
+    shortcut.href = `/static/embed.html#${encodeURIComponent(link)}`;
+    shortcut.className = 'circle';
+
+    const img = document.createElement('img');
+    img.src = imageLink;
+    img.alt = name;
+
+    const textDiv = document.createElement('div');
+    textDiv.className = 'circle-text';
+    textDiv.innerText = name;
+
+    shortcut.appendChild(img);
+    shortcut.appendChild(textDiv);
+
+    const shortcutsContainer = document.getElementById('shortcuts');
+    shortcutsContainer.insertBefore(shortcut, shortcutsContainer.firstChild);
+
+    saveShortcut(link, imageLink, name);
+}
+
+function saveShortcut(link, imageLink, name) {
+    const shortcuts = JSON.parse(localStorage.getItem('shortcuts')) || [];
+    shortcuts.push({ link, imageLink, name });
+    localStorage.setItem('shortcuts', JSON.stringify(shortcuts));
+}
+
+function remove() {
+    const name = prompt("Enter the name of the shortcut you want to remove");
+    let shortcuts = JSON.parse(localStorage.getItem('shortcuts')) || [];
+
+    shortcuts = shortcuts.filter(shortcut => shortcut.name !== name);
+    localStorage.setItem('shortcuts', JSON.stringify(shortcuts));
+    loadShortcuts();
+}
+
+function loadShortcuts() {
+    const shortcuts = JSON.parse(localStorage.getItem('shortcuts')) || [];
+    const shortcutsContainer = document.getElementById('shortcuts');
+    shortcutsContainer.innerHTML = ''; // Clear existing shortcuts
+
+    shortcuts.forEach(shortcut => {
+        const shortcutElement = document.createElement('a');
+        shortcutElement.href = `/static/embed.html#${encodeURIComponent(shortcut.link)}`;
+        shortcutElement.className = 'circle';
+        
+        const imgElement = document.createElement('img');
+        imgElement.src = shortcut.imageLink;
+        imgElement.alt = shortcut.name;
+        
+        const textDiv = document.createElement('div');
+        textDiv.className = 'circle-text';
+        textDiv.innerText = shortcut.name;
+
+        shortcutElement.appendChild(imgElement);
+        shortcutElement.appendChild(textDiv);
+        shortcutsContainer.appendChild(shortcutElement);
+    });
+}
+
+window.onload = loadShortcuts;
+
+</script>
 </html>
