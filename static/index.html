@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLEXILE ARCADE | Search</title>
+    <link rel="icon" type="image/png" href="/images/plexilearcade.png">
+    <meta property="og:title" content="PLEXILE ARCADE">
+    <meta name="theme-color" content="#C93131">
+    <meta name="msapplication-TileColor" content="#C93131">
+    <meta property="og:image" content="/images/plexilearcade.png">
+    <meta name="description" content="The Next Generation Of Unblocked Sites...">
+    <meta property="og:description" content="The Next Generation Of Unblocked Sites...">
+    <link rel="icon" type="image/png" href="/images/plexilearcade.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/loader.css">
+    <link rel="stylesheet" href="/css/search.css">
+</head>
+<body>
+
+    <style>
+        .sidebar-icon.ssearch-icon {
+          color: #fff; 
+        }
+
+        .sidebar-icon.ssearch-icon::before {
+            color: #fff;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 95%;
+            height: 100%;
+            border-left: 3px solid #C93131; 
+            background-color: #333232; 
+            opacity: 1; 
+            z-index: -1; 
+        }
+    </style>
+
+    <div id="loader">
+        <div class="rect1"></div>
+        <div class="rect2"></div>
+        <div class="rect3"></div>
+        <div class="rect4"></div>
+        <div class="rect5"></div>
+    </div>
+
+    <div class="sidebar">
+        <a href="/" class="sidebar-icon home-icon"><i class="bx bx-home-alt icon"></i></a>
+        <a href="/games.html" class="sidebar-icon games-icon"><i class="bx bx-joystick icon"></i></a>
+        <a href="/apps.html" class="sidebar-icon dots-icon"><i class="bx bx-grid-alt icon"></i></a>
+        <a href="/search.html" class="sidebar-icon ssearch-icon"><i class="bx bx-search icon"></i></a>
+        <a href="/links.html" class="sidebar-icon links-icon"><i class="bx bx-link-alt icon"></i></a>
+        <a href="/settings.html" class="sidebar-icon cog-icon"><i class="bx bx-cog icon"></i></a>
+    </div>
+
+    <br><br><br><br><br><br><br><br><br>
+
+    </head>
+    <body>
+    <div class="container">
+
+        <center>
+            <h1 id="timeDisplay" style="color: #C93131;">TIME HERE</h1>
+        </center>
+        <br>
+
+        <center>
+          <form id="uv-form">
+            <i class="fas fa-search search-icon"></i>
+            <input id="uv-search-engine" value="https://www.google.com/search?q=%s" type="hidden"/> 
+            <input id="uv-address" class="search-bar" type="text" placeholder="Search Google or type an URL" class="form__input"/>
+          </form>
+          <div class="desc left-margin">
+            <p id="uv-error"></p>
+            <pre id="uv-error-code"></pre>
+          </div>
+      </div>
+            </center>
+
+        <div class="circle-container">
+            <a href="linkhere" class="circle">
+                <img src="/images/proxy-images/nowgg.png" alt="now.gg">
+                <div class="circle-text">now.gg</div>
+            </a>
+            <a href="linkhere" class="circle">
+                <img src="/images/proxy-images/google.png" alt="Google">
+                <div class="circle-text">Google</div>
+            </a>
+            <a href="linkhere" class="circle">
+                <img src="/images/proxy-images/discord.png" alt="Discord">
+                <div class="circle-text">Discord</div>
+            </a>
+            <a href="linkhere" class="circle">
+                <img src="/images/proxy-images/github.png" alt="Github">
+                <div class="circle-text">Github</div>
+            </a>
+            <a href="linkhere" class="circle">
+                <img src="/images/proxy-images/youtube.png" alt="Youtube">
+                <div class="circle-text">YT</div>
+            </a>
+            <a  class="circle">
+                <img src="/images/proxy-images/add.png" alt="Add Shortcut">
+                <div class="circle-text">Add</div>
+            </a>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/js/main.js"></script>
+    <script src="/js/loader.js"></script>
+    <script src="/js/highlight.js" defer></script>
+    <script src="/js/time.js" defer></script>
+
+
+        <!-- Settings Scripts -->
+        <script src="/js/settings/anticlosing.js"></script>
+        <script src="/js/settings/clickoffcloaking.js"></script>
+        <script src="/js/settings/tabcloak.js" defer></script>
+        <script src="/js/settings/panic.js"></script>
+        <script src="/js/settings/mobile.js"></script>
+        <script src="/js/settings/themes.js" defer></script>
+        <!--Ultraviolet scripts-->
+        <script src="/static/uv/uv.bundle.js" defer></script>
+        <script src="/static/uv/uv.config.js" defer></script>
+        <script src="/static/register-sw.js" defer></script>
+        <script src="/static/search.js" defer></script>
+        <script src="/static/index.js" defer></script>
+        <script src="/static/error.js" defer></script>
+</body>
+</html>
