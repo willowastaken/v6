@@ -64,17 +64,33 @@
         </center>
         <br>
 
-        <center>
-          <form id="uv-form">
+           <center>
+        <form id="uv-form" onsubmit="showLoader(event)">
             <input id="uv-search-engine" value="https://www.google.com/search?q=%s" type="hidden"/> 
-            <input id="uv-address" class="search-bar" type="text" placeholder="Search Google or type an URL" class="form__input"/>
-          </form>
-          <div class="desc left-margin">
+            <input id="uv-address" class="search-bar" type="text" placeholder="Search Google or type a URL" class="form__input"/>
+        </form>
+        <div class="desc left-margin">
             <p id="uv-error"></p>
             <pre id="uv-error-code"></pre>
-          </div>
-      </div>
-        </center>
+        </div>
+    </center>
+
+    <script>
+        function showLoader(event) {
+            event.preventDefault(); // Prevent the default form submission
+            document.getElementById('loader').style.display = 'flex'; // Show loader
+            
+            // Extract the URL from the input field
+            const searchEngine = document.getElementById('uv-search-engine').value;
+            const query = document.getElementById('uv-address').value;
+            const url = searchEngine.replace('%s', encodeURIComponent(query));
+            
+            // Redirect to the proxied page after a short delay
+            setTimeout(() => {
+                window.location.href = url;
+            }, 500); // Adjust delay as needed
+        }
+    </script>
 
             <div class="circle-container">
             <a href="/static/embed.html#https://shuttle.lol" class="circle">
