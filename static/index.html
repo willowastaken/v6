@@ -57,6 +57,8 @@
     <body style="overflow:hidden;">
     <div class="container">
 
+          <br><br><br><br><br><br><br><br><br>
+        
         <center>
             <h1 id="timeDisplay" style="color: #C93131;">TIME HERE</h1>
         </center>
@@ -72,8 +74,8 @@
             <pre id="uv-error-code"></pre>
           </div>
       </div>
-            </center>
-
+        </center>
+<br>
             <div class="circle-container">
             <a href="/static/embed.html#https://shuttle.lol" class="circle">
                 <img src="/images/proxy-images/nowgg.png" alt="now.gg">
@@ -91,23 +93,15 @@
                 <img src="/images/proxy-images/github.png" alt="Github">
                 <div class="circle-text">Github</div>
             </a>
-            <a href="/static/embed.html#https://youtube.com" class="circle">
+            <a href="/static/embed.html#https://https://yewtu.be" class="circle">
                 <img src="/images/proxy-images/youtube.png" alt="Youtube">
                 <center>
                 <div class="circle-text">YT</div>
             </center>
             </a>
-            <a href="/static/embed.html#https://yewtu.be" class="circle">
-                <img src="/images/proxy-images/iv.png" alt="Invidious (youtube alternative)">
-                <div class="circle-text">IV</div>
-            </a>
             <a onclick="add()" class="circle">
                 <img src="/images/proxy-images/add.png" alt="Add Shortcut">
                 <div class="circle-text">Add</div>
-            </a>
-            <a onclick="remove()" class="circle">
-                <img src="/images/proxy-images/remove.png" alt="Remove Shortcut">
-                <div class="circle-text">Remove</div>
             </a>
             </div>
             <div class="circle-container" id="shortcuts"></div>
@@ -127,6 +121,7 @@
         <script src="/js/settings/panic.js"></script>
         <script src="/js/settings/mobile.js"></script>
         <script src="/js/settings/themes.js" defer></script>
+        
         <!--Ultraviolet scripts-->
         <script src="/static/uv/uv.bundle.js" defer></script>
         <script src="/static/uv/uv.config.js" defer></script>
@@ -184,7 +179,7 @@ function remove() {
 function loadShortcuts() {
     const shortcuts = JSON.parse(localStorage.getItem('shortcuts')) || [];
     const shortcutsContainer = document.getElementById('shortcuts');
-    shortcutsContainer.innerHTML = ''; // Clear existing shortcuts
+    shortcutsContainer.innerHTML = ''; 
 
     shortcuts.forEach(shortcut => {
         const shortcutElement = document.createElement('a');
