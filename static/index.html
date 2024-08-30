@@ -64,17 +64,65 @@
         </center>
         <br>
 
-      <center>
-          <form id="uv-form">
-            <input id="uv-search-engine" value="https://www.google.com/search?q=%s" type="hidden"/> 
-            <input id="uv-address" class="search-bar" type="text" placeholder="Search Google or type an URL" class="form__input"/>
-          </form>
-          <div class="desc left-margin">
-            <p id="uv-error"></p>
-            <pre id="uv-error-code"></pre>
-          </div>
-      </div>
-        </center>
+<center>
+  <form id="uv-form">
+    <input id="uv-search-engine" value="https://www.google.com/search?q=%s" type="hidden"/> 
+    <input id="uv-address" class="search-bar" type="text" placeholder="Search Google or type a URL" class="form__input"/>
+    <button type="submit">Search</button>
+  </form>
+  <div class="desc left-margin">
+    <p id="uv-error"></p>
+    <pre id="uv-error-code"></pre>
+  </div>
+</center>
+
+<!-- Loader HTML -->
+<div id="loaderr" class="loaderr"></div>
+
+        <style>.loaderr {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none; /* Hide by default */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.loadert::before {
+  content: '';
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #3498db;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+</style>
+<script>
+ document.getElementById('uv-form').addEventListener('submit', function(event) {
+
+  document.getElementById('loaderr').style.display = 'flex';
+
+  event.preventDefault();
+
+  setTimeout(function() {
+    
+    const searchAddress = document.getElementById('uv-address').value;
+    window.location.href = `https://www.google.com/search?q=${encodeURIComponent(searchAddress)}`;
+    
+    document.getElementById('loaderr').style.display = 'none';
+  }, 2000); 
+});
+</script>
 
             <div class="circle-container">
             <a href="/static/embed.html#https://shuttle.lol" class="circle">
