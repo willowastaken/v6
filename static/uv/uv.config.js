@@ -1,5 +1,5 @@
 self.__uv$config = {
-    prefix: '/static/plexsw/',
+    prefix: '/static/pa/',
     bare:'https://bare.elephantmunchingcontest.tech',
     encodeUrl: Ultraviolet.codec.xor.encode,
     decodeUrl: Ultraviolet.codec.xor.decode,
