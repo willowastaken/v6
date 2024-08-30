@@ -1,4 +1,4 @@
-var cacheName = 'JMW Unblocker';
+var cacheName = 'PLEXILE ARCADE';
 var filesToCache = [
   '/js/sw.js'
 ];
