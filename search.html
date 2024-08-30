@@ -11,6 +11,7 @@
     <meta property="og:image" content="/images/plexilearcade.png">
     <meta name="description" content="The Next Generation Of Unblocked Sites...">
     <meta property="og:description" content="The Next Generation Of Unblocked Sites...">
+    <link rel="icon" type="image/png" href="/images/plexilearcade.png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
@@ -22,24 +23,24 @@
     <link rel="stylesheet" href="/css/loader.css">
     <link rel="stylesheet" href="/css/search.css">
 
+</head>
+<body>
+
     <style>
         * {
-            margin: 0;
-            padding: 0;
+            margin:0;
+            padding:0;
         }
-
         .icons {
-            font-size: 24px;
+            font-size:24px;
             text-decoration: none;
         }
-
         .icons a {
-            color: white;
-            margin: 15px;
+            color:white;
+            margin:15px;
         }
-
         .sidebar-icon.ssearch-icon {
-            color: #fff; 
+          color: #fff; 
         }
 
         .sidebar-icon.ssearch-icon::before {
@@ -55,62 +56,8 @@
             opacity: 1; 
             z-index: -1; 
         }
-
-        #loader {
-            position: fixed; 
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #111111;
-            z-index: 9999;
-            transition: opacity 0.5s ease-out; 
-        }
-
-        #loader div {
-            background-color: #C93131;
-            height: 40px; 
-            width: 10px; 
-            margin: 2px;
-            border-radius: 15px; 
-            animation: loaderAnimation 1.8s infinite ease-in-out; 
-        }
-
-        #loader .rect2 {
-            animation-delay: -1.6s;
-        }
-
-        #loader .rect3 {
-            animation-delay: -1.4s;
-        }
-
-        #loader .rect4 {
-            animation-delay: -1.2s;
-        }
-
-        #loader .rect5 {
-            animation-delay: -1.0s;
-        }
-
-        @keyframes loaderAnimation {
-            0%, 40%, 100% { transform: scaleY(0.4); }  
-            20% { transform: scaleY(1.0); }
-        }
-
-        #content {
-            display: none;
-        }
-
-        .fade-out {
-            opacity: 0; 
-            pointer-events: none; 
-        }
     </style>
-</head>
-<body>
+
     <div id="loader">
         <div class="rect1"></div>
         <div class="rect2"></div>
@@ -128,38 +75,28 @@
         <a href="/settings.html" class="sidebar-icon cog-icon"><i class="bx bx-cog icon"></i></a>
     </div>
 
-    <center>
-        <iframe id="frameWeb" style="width: 100%; height: 100vh; border: none;" src="/static/"></iframe>
-    </center>
 
-    <!-- Scripts -->
+    </head>
+    <body>
+<center>
+        <iframe id="frameWeb" style=" width: 100%; height: 100vh; border: none;" src="/static/"></iframe>
+    </center>
+    <center>
+</div>
+</center>
+   <!-- Scripts -->
     <script src="/js/main.js"></script>
     <script src="/js/loader.js"></script>
     <script src="/js/highlight.js" defer></script>
     <script src="/js/time.js" defer></script>
 
-    <!-- Settings Scripts -->
-    <script src="/js/settings/anticlosing.js"></script>
-    <script src="/js/settings/clickoffcloaking.js"></script>
-    <script src="/js/settings/tabcloak.js" defer></script>
-    <script src="/js/settings/panic.js"></script>
-    <script src="/js/settings/mobile.js"></script>
-    <script src="/js/settings/themes.js" defer></script>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            window.addEventListener('load', function() {
-                setTimeout(function() {
-                    const loader = document.getElementById('loader');
-                    loader.classList.add('fade-out');
-
-                    loader.addEventListener('transitionend', function() {
-                        loader.style.display = 'none';
-                        document.getElementById('content').style.display = 'block';
-                    });
-                }, 1000); // Adjust the delay if needed
-            });
-        });
-    </script>
+        <!-- Settings Scripts -->
+        <script src="/js/settings/anticlosing.js"></script>
+        <script src="/js/settings/clickoffcloaking.js"></script>
+        <script src="/js/settings/tabcloak.js" defer></script>
+        <script src="/js/settings/panic.js"></script>
+        <script src="/js/settings/mobile.js"></script>
+        <script src="/js/settings/themes.js" defer></script>
 </body>
 </html>
