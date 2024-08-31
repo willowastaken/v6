@@ -26,6 +26,11 @@
 <body>
 
     <style>
+
+      element {
+  overflow: hidden;  
+}
+        
         .sidebar-icon.ssearch-icon {
           color: #fff; 
         }
@@ -64,18 +69,17 @@
         </center>
         <br>
 
-        <center>
-          <form id="uv-form">
-            <input id="uv-search-engine" value="https://www.google.com/search?q=%s" type="hidden"/> 
-            <input id="uv-address" class="search-bar" type="text" placeholder="Search Google or type an URL" class="form__input"/>
-          </form>
-          <div class="desc left-margin">
-            <p id="uv-error"></p>
-            <pre id="uv-error-code"></pre>
-          </div>
-      </div>
-        </center>
-
+<center>
+  <form id="uv-form">
+    <input id="uv-search-engine" value="https://www.google.com/search?q=%s" type="hidden"/> 
+    <input id="uv-address" class="search-bar" type="text" placeholder="Search Google or type a URL" class="form__input"/>
+  </form>
+  <div class="desc left-margin">
+    <p id="uv-error"></p>
+    <pre id="uv-error-code"></pre>
+  </div>
+</center>
+        
             <div class="circle-container">
             <a href="/static/embed.html#https://shuttle.lol" class="circle">
                 <img src="/images/proxy-images/nowgg.png" alt="now.gg">
