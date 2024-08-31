@@ -110,6 +110,16 @@
                   }
               }
           </script>
+         <script>
+        function showAlert() {
+            if (!localStorage.getItem('alertShown')) {
+                alert('If the page doesnt load, Please Try Again Later.');
+                localStorage.setItem('alertShown', 'true');
+            }
+        }
+
+        showAlert();
+        </script>
 
         <!-- Scripts -->
         <script src="/js/main.js"></script>
