@@ -104,7 +104,7 @@
                 <div class="circle-text">Add</div>
             </a>
             </div>
-            <div class="circle-container" id="shortcuts"></div>
+            <div id="shortcuts"></div>
     </div>
 
     <!-- Scripts -->
@@ -132,75 +132,95 @@
 </body>
 <script>
 function add() {
-    let link = prompt("Enter the link (must start with https://)");
-    if (!link.startsWith('https://')) {
-        link = 'https://' + link;
-    }
+            let link = prompt("Enter the link (must start with https://)");
+            if (!link.startsWith('https://')) {
+                link = 'https://' + link;
+            }
 
-    const imageLink = prompt("Enter the image link");
-    const name = prompt("Enter the name");
+            const imageLink = prompt("Enter the image link");
+            const name = prompt("Enter the name");
 
-    const shortcut = document.createElement('a');
-    shortcut.href = `/static/embed.html#${encodeURIComponent(link)}`;
-    shortcut.className = 'circle';
+            const shortcut = document.createElement('div');
+            shortcut.className = 'circle-container';
 
-    const img = document.createElement('img');
-    img.src = imageLink;
-    img.alt = name;
+            const shortcutLink = document.createElement('a');
+            shortcutLink.href = `/static/embed.html#${encodeURIComponent(link)}`;
+            shortcutLink.className = 'circle';
 
-    const textDiv = document.createElement('div');
-    textDiv.className = 'circle-text';
-    textDiv.innerText = name;
+            const img = document.createElement('img');
+            img.src = imageLink;
+            img.alt = name;
 
-    shortcut.appendChild(img);
-    shortcut.appendChild(textDiv);
+            const textDiv = document.createElement('div');
+            textDiv.className = 'circle-text';
+            textDiv.innerText = name;
 
-    const shortcutsContainer = document.getElementById('shortcuts');
-    shortcutsContainer.insertBefore(shortcut, shortcutsContainer.firstChild);
+            const removeButton = document.createElement('div');
+            removeButton.className = 'remove-btn';
+            removeButton.innerHTML = '<img src="/images/proxy-images/x.png">'; 
+            removeButton.onclick = () => remove(name);
 
-    saveShortcut(link, imageLink, name);
-}
+            shortcutLink.appendChild(img);
+            shortcutLink.appendChild(textDiv);
 
-function saveShortcut(link, imageLink, name) {
-    const shortcuts = JSON.parse(localStorage.getItem('shortcuts')) || [];
-    shortcuts.push({ link, imageLink, name });
-    localStorage.setItem('shortcuts', JSON.stringify(shortcuts));
-}
+            shortcut.appendChild(shortcutLink);
+            shortcut.appendChild(removeButton);
 
-function remove() {
-    const name = prompt("Enter the name of the shortcut you want to remove");
-    let shortcuts = JSON.parse(localStorage.getItem('shortcuts')) || [];
+            const shortcutsContainer = document.getElementById('shortcuts');
+            shortcutsContainer.insertBefore(shortcut, shortcutsContainer.firstChild);
 
-    shortcuts = shortcuts.filter(shortcut => shortcut.name !== name);
-    localStorage.setItem('shortcuts', JSON.stringify(shortcuts));
-    loadShortcuts();
-}
+            saveShortcut(link, imageLink, name);
+        }
 
-function loadShortcuts() {
-    const shortcuts = JSON.parse(localStorage.getItem('shortcuts')) || [];
-    const shortcutsContainer = document.getElementById('shortcuts');
-    shortcutsContainer.innerHTML = ''; 
+        function saveShortcut(link, imageLink, name) {
+            const shortcuts = JSON.parse(localStorage.getItem('shortcuts')) || [];
+            shortcuts.push({ link, imageLink, name });
+            localStorage.setItem('shortcuts', JSON.stringify(shortcuts));
+        }
 
-    shortcuts.forEach(shortcut => {
-        const shortcutElement = document.createElement('a');
-        shortcutElement.href = `/static/embed.html#${encodeURIComponent(shortcut.link)}`;
-        shortcutElement.className = 'circle';
-        
-        const imgElement = document.createElement('img');
-        imgElement.src = shortcut.imageLink;
-        imgElement.alt = shortcut.name;
-        
-        const textDiv = document.createElement('div');
-        textDiv.className = 'circle-text';
-        textDiv.innerText = shortcut.name;
+        function remove(name) {
+            let shortcuts = JSON.parse(localStorage.getItem('shortcuts')) || [];
+            shortcuts = shortcuts.filter(shortcut => shortcut.name !== name);
+            localStorage.setItem('shortcuts', JSON.stringify(shortcuts));
+            loadShortcuts();  // Reload the list of shortcuts to update the UI
+        }
 
-        shortcutElement.appendChild(imgElement);
-        shortcutElement.appendChild(textDiv);
-        shortcutsContainer.appendChild(shortcutElement);
-    });
-}
+        function loadShortcuts() {
+            const shortcuts = JSON.parse(localStorage.getItem('shortcuts')) || [];
+            const shortcutsContainer = document.getElementById('shortcuts');
+            shortcutsContainer.innerHTML = '';  // Clear current shortcuts
 
-window.onload = loadShortcuts;
+            shortcuts.forEach(shortcut => {
+                const shortcutElement = document.createElement('div');
+                shortcutElement.className = 'circle-container';
 
+                const shortcutLink = document.createElement('a');
+                shortcutLink.href = `/static/embed.html#${encodeURIComponent(shortcut.link)}`;
+                shortcutLink.className = 'circle';
+
+                const imgElement = document.createElement('img');
+                imgElement.src = shortcut.imageLink;
+                imgElement.alt = shortcut.name;
+
+                const textDiv = document.createElement('div');
+                textDiv.className = 'circle-text';
+                textDiv.innerText = shortcut.name;
+
+                const removeButton = document.createElement('div');
+                removeButton.className = 'remove-btn';
+                removeButton.innerHTML = '<img src="/images/proxy-images/x.png">';
+                removeButton.onclick = () => remove(shortcut.name);
+
+                shortcutLink.appendChild(imgElement);
+                shortcutLink.appendChild(textDiv);
+
+                shortcutElement.appendChild(shortcutLink);
+                shortcutElement.appendChild(removeButton);
+
+                shortcutsContainer.appendChild(shortcutElement);
+            });
+        }
+
+        window.onload = loadShortcuts;
 </script>
 </html>

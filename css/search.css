@@ -66,67 +66,88 @@
     background-color: #1A1A1A;
 }
 
+.circle-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    position: relative;
+    margin-bottom:20px;
+}
 
- .circle-container {
-        display: flex;
-        justify-content: center;
-        margin-top: 25px;
-    }
-
-    .circle {
-        width: 48px;
-        height: 48px;
-        border-radius: 50%;
-        background-color: #212121;
-        position: relative;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-        margin: 0 15px;
-    }
-
-    .circle::before {
-        content: '';
-        position: absolute;
-        border-radius: 5px;
-        top: -5px;
-        left: -14px;
-        width: 77px;
-        height: 80px;
-        background-color: rgba(255, 255, 255, 0.2);
-        opacity: 0;
-        transition: opacity 0.3s ease;
-        z-index: 0; 
-    }
-
-    .circle:hover::before {
-        opacity: 1;
-    }
-
-    .circle img {
-        width: 35px;
-        height: 35px;
-        border-radius: 60px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 1; 
-    }
-
-    .circle-text {
-        color: #fff;
-        font-size: 14px;
-        position: absolute;
-        bottom: -23px;
-        width: 100%;
-        opacity: 1;
-        text-align: center;
-        z-index: 1; 
-    }
-
-.remove-button {
-    margin-top: 5px;
-    color: red;
+.circle {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #212121;
+    position: relative;
     cursor: pointer;
-    font-size: 12px;
+    transition: background-color 0.3s ease;
+    margin: 15px;
+}
+
+.circle::before {
+    content: '';
+    position: absolute;
+    border-radius: 5px;
+    top: -5px;
+    left: -14px;
+    width: 77px;
+    height: 80px;
+    background-color: rgba(255, 255, 255, 0.2);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 0;
+}
+
+.circle:hover::before {
+    opacity: 1;
+}
+
+
+
+.circle img {
+    width: 35px;
+    height: 35px;
+    border-radius: 60px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.circle-text {
+    color: #fff;
+    font-size: 14px;
+    position: absolute;
+    bottom: -23px;
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+}
+
+.remove-btn {
+    position:relative;
+    cursor: pointer;
+    width: 15px;
+    height:15px;
+    top: 15px;
+    right:18px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+}
+
+.remove-btn img {
+    width:15px;
+}
+
+.remove-btn::before {
+    background-color: rgba(255, 255, 255, 0.2);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 0;
+}
+
+.remove-btn:hover::before {
+    opacity:1;
 }
