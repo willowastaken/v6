@@ -28,11 +28,16 @@
   </a>
 </div>
 
-<div align="center">
+<br>
+Then you will need to finish the required setup on the service your using but after that you can Enjoy The Best Game Website ever!
+<br>
+
 
 <a target="_blank" href="https://github.com/GalacticNetwork/jordansmathwork-v6/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=GalacticNetwork/jordansmathwork-v6" />
 </a>
 
-<br>
-Then you will need to finish the required setup on the service your using but after that you can Enjoy The Best Game Website ever!
+<a href="https://github.com/3kh0/3kh0-assets/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=3kh0/3kh0-assets" />
+</a>
+
