@@ -29,4 +29,4 @@
 </div>
 
 <br>
-Then you will need to finish the required setup on the service your using but after that you can Enjoy The Best Game Website ever!
+Then you will need to finish the required setup on the service you deployed on
