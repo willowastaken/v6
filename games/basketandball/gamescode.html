@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="HandheldFriendly" content="true" />
+
+<meta name="mobile-web-app-capable" content="yes" />
+
+</head>
+
+<script type="text/javascript">
+try {
+document.domain ="";
+} catch (err) {
+console.log('error trying to document.domain ="": ' + err);
+}
+function HTML5API_levelStarted() {
+window.HTML5API && HTML5API.levelStarted && HTML5API.levelStarted();
+}
+function HTML5API_levelEnded() {
+window.HTML5API && HTML5API.levelEnded && HTML5API.levelEnded();
+}
+function HTML5API_preloaderStarted() {
+window.HTML5API && HTML5API.preloaderStarted && HTML5API.preloaderStarted();
+}
+function HTML5API_preloaderEnded() {
+window.HTML5API && HTML5API.preloaderEnded && HTML5API.preloaderEnded();
+}
+function HTML5API_onAdStart(func) { return window.HTML5API && HTML5API.onAdStart && 
+HTML5API.onAdStart(func); }
+function HTML5API_onAdComplete(func) { return window.HTML5API && HTML5API.onAdComplete && 
+HTML5API.onAdComplete(func); }
+function HTML5API_displayMidroll() {  window.HTML5API && HTML5API.displayMidroll && 
+HTML5API.displayMidroll(); }
+function HTML5API_isMidrollPending() {  return window.HTML5API && HTML5API.isMidrollPending && 
+HTML5API.isMidrollPending(); }
+// returns notification id which can be used for canceling
+function HTML5API_sendLocalNotification(delayMS, iconUrl, title, text, bigContentTitle, bigContentText, 
+gameExtras) {
+return window.HTML5API && HTML5API.sendLocalNotification && 
+HTML5API.sendLocalNotification(delayMS, iconUrl, title, text, bigContentTitle, bigContentText, 
+gameExtras);
+}
+function HTML5API_cancelLocalNotification(id) {
+return window.HTML5API && HTML5API.cancelLocalNotification && 
+HTML5API.cancelLocalNotification(id);
+}
+</script>
+
+<body style="width:100%;height:100%;overflow: hidden;margin:0px;padding:0px;background-color:#000;-ms-touch-action: none;touch-action: none;touch-action-delay: none;-webkit-touch-callout: none;">
+
+<script type="text/javascript" src="/loader.js"></script>
+</body>
+</html>
