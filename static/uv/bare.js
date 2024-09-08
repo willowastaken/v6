@@ -3,7 +3,7 @@
     var selectedValue = select.value;
 
     if (selectedValue === 'custom') {
-      var customBare = prompt("Enter custom Bare URL:", localStorage.getItem('bare'));
+      var customBare = prompt("Enter custom Bare URL:", localStorage.getItem('bare') || '');
       if (customBare) {
         saveBare(customBare);
       }
@@ -20,16 +20,15 @@
   function applyCustomBare() {
     var bare = localStorage.getItem('bare');
     if (bare) {
-     
+      
       self.__uv$config.bare = bare;
       
-      window.location.reload();
+      console.log("Updated bare to: " + bare);  
     }
   }
 
   window.onload = function() {
-    var bare = localStorage.getItem('bare');
-    if (bare) {
-      document.getElementById('bareSelect').value = bare;
-    }
+    var bare = localStorage.getItem('bare') || 'https://bonkerbankers-xyz.onrender.com/bare/'; 
+    document.getElementById('bareSelect').value = bare;
+    applyCustomBare();
   };
