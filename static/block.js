@@ -8,7 +8,7 @@
     const blockedKeywords = [
         "sex", "porn", "xxx", "hentai", "erotic", "nude", "naked", "blowjob", "anal", "fetish",
         "hardcore", "gangbang", "masturbation", "camgirl", "dick", "pussy", "dildo", "bdsm",
-        "racist", "homophobic", "xenophobic", "slur", "hate speech", "nazi", "kkk", "terrorism", 
+        "cum", "homophobic", "xenophobic", "slur", "creampie", "nazi", "kkk", "terrorism", 
         "jihad", "doxx", "doxxing", "hate crime", "white supremacy", "drugs", "weed", "cocaine",
         "heroin", "meth", "buy guns", "deep web", "dark web", "black market", "counterfeit",
         "credit card fraud", "piracy", "torrent", "murder", "massacre", "torture", "gore", "self-harm", 
