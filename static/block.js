@@ -11,9 +11,8 @@
         "racist", "homophobic", "xenophobic", "slur", "hate speech", "nazi", "kkk", "terrorism", 
         "jihad", "doxx", "doxxing", "hate crime", "white supremacy", "drugs", "weed", "cocaine",
         "heroin", "meth", "buy guns", "deep web", "dark web", "black market", "counterfeit",
-        "hack", "hacker", "hacking", "credit card fraud", "piracy", "torrent", "murder",
-        "massacre", "torture", "gore", "self-harm", "cut yourself",
-        "gun", "phishing", "s3x", "SSN", "social security number"
+        "credit card fraud", "piracy", "torrent", "murder", "massacre", "torture", "gore", "self-harm", 
+        "cut yourself", "gun", "phishing", "s3x", "SSN", "social security number"
     ];
 
     const blockedKeywordPatterns = [
