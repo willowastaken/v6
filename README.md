@@ -25,5 +25,3 @@
   </a>
 </div>
 
-<br>
-Then you will need to finish the required setup on the service you deployed on
