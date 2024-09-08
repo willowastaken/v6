@@ -5,8 +5,8 @@
 </kbd>
 </p>
 <h1 align="center" style="color: #b03232;">PLEXILE ARCADE v6</h1>
-<h3>The Website With The Best GAMES!</h3>
-<p align="center">Join PLEXILE ARCADE Now & Get to Arcading at School!</p>
+<h3>The Unblocked Website With The Best GAMES!</h3>
+<p align="center">Having 130+ Games, 20+ Apps & A built-in Proxy, PLEXILE ARCADE Has it all. So Join PLEXILE ARCADE Now & Get to Arcading at School!</p>
 
 
 <div align="center">
