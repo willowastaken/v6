@@ -57,7 +57,6 @@
             
             if (isBlockedSite(inputValue) || containsBlockedKeyword(inputValue) || containsBlockedKeywordPattern(inputValue)) {
                 event.preventDefault(); 
-                document.getElementById('uv-error').innerText = "Access to this site or search term is blocked!";
                 document.getElementById('uv-error-code').innerText = `Blocked content detected: ${inputValue}`;
                 this.blur(); 
             }
