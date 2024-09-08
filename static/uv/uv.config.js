@@ -1,6 +1,6 @@
 self.__uv$config = {
   prefix: '/static/pa/',
-  bare: '',  
+  bare: 'https://bonkerbankers-xyz.onrender.com/bare/',  
   encodeUrl: Ultraviolet.codec.xor.encode,
   decodeUrl: Ultraviolet.codec.xor.decode,
   handler: '/static/uv/uv.handler.js',
