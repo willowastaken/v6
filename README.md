@@ -8,14 +8,8 @@
 
 
 <div align="center">
-  <a target="_blank" href="https://replit.com/github/PLEXILENetwork/v5">
-    <img alt="Run on Replit" src="https://binbashbanana.github.io/deploy-buttons/buttons/remade/replit.svg">
-  </a>
   <a target="_blank" href="https://vercel.com/new/clone?repository-url=https://replit.com/github/PLEXILENetwork/v5">
     <img alt="Deploy to Vercel" src="https://binbashbanana.github.io/deploy-buttons/buttons/remade/vercel.svg">
-  </a>
-  <a target="_blank" href="https://glitch.com/edit/#!/import/github/PLEXILENetwork/v5">
-    <img alt="Remix on Glitch" src="https://binbashbanana.github.io/deploy-buttons/buttons/official/glitch.svg">
   </a>
   <a target="_blank" href="https://app.netlify.com/start/deploy?repository=https://github.com/PLEXILENetwork/v5">
     <img alt="Deploy to Netlify" src="https://binbashbanana.github.io/deploy-buttons/buttons/official/netlify.svg">
