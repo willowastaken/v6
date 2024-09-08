@@ -3,7 +3,8 @@ window.onload = function() {
     const savedOption = localStorage.getItem('bareOption');
 
     if (savedOption) {
-        document.getElementById('bareSelect').value = savedOption;
+        const select = document.getElementById('bareSelect');
+        select.value = savedOption;
         if (savedBare) {
             applyCustomBare(savedBare);
         }
@@ -42,11 +43,15 @@ function isValidUrl(url) {
 }
 
 function applyCustomBare(bareUrl) {
+    
     if (typeof Ultraviolet !== 'undefined') {
-        Ultraviolet.config.bare = bareUrl; 
+        
+        Ultraviolet.config.bare = bareUrl;
         console.log('Updated bare URL:', bareUrl);
-
-        location.reload(); 
+        
+        setTimeout(() => {
+            location.reload();
+        }, 100);
     } else {
         console.log('Ultraviolet or client-side config not available.');
     }
