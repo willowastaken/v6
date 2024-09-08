@@ -1,10 +1,12 @@
-  // Load saved bare URL and selected option on page load
   window.onload = function () {
     const savedBare = localStorage.getItem('bare');
     const savedOption = localStorage.getItem('bareOption');
 
     if (savedOption) {
       document.getElementById('bareSelect').value = savedOption;
+      if (savedBare) {
+        applyCustomBare(savedBare);
+      }
     }
   };
 
@@ -41,17 +43,16 @@
     }
   }
 
-  // Function to apply the new bare URL to the proxy config
+  // Function to apply the new bare URL to the Ultraviolet configuration
   function applyCustomBare(bareUrl) {
-    // Assuming Ultraviolet is using a service worker or similar mechanism
-    if (self.__uv$config) {
-      self.__uv$config.bare = bareUrl;
+    // Assuming Ultraviolet is initialized and supports dynamic configuration
+    if (typeof Ultraviolet !== 'undefined') {
+      Ultraviolet.config.bare = bareUrl; // Update configuration dynamically
       console.log('Updated bare URL:', bareUrl);
 
-      // Reload the page to apply new config
-      // You might need to reload or reinitialize Ultraviolet here
-      location.reload();
+      // Optionally reload or reinitialize components if needed
+      location.reload(); // Use if necessary to apply changes
     } else {
-      console.log('Ultraviolet config not available.');
+      console.log('Ultraviolet or client-side config not available.');
     }
   }
