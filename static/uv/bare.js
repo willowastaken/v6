@@ -1,3 +1,4 @@
+  // Load saved bare URL and selected option on page load
   window.onload = function () {
     const savedBare = localStorage.getItem('bare');
     const savedOption = localStorage.getItem('bareOption');
@@ -43,9 +44,10 @@
     }
   }
 
-  // Function to apply the new bare URL to the Ultraviolet configuration
+  // Function to apply the new bare URL to the proxy config
   function applyCustomBare(bareUrl) {
-    // Assuming Ultraviolet is initialized and supports dynamic configuration
+    // Here you would apply the new bare URL to your Ultraviolet configuration
+    // Example (assuming Ultraviolet supports reconfiguration):
     if (typeof Ultraviolet !== 'undefined') {
       Ultraviolet.config.bare = bareUrl; // Update configuration dynamically
       console.log('Updated bare URL:', bareUrl);
