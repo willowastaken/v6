@@ -1,3 +1,4 @@
+  // Load saved bare URL and selected option on page load
   window.onload = function () {
     const savedBare = localStorage.getItem('bare');
     const savedOption = localStorage.getItem('bareOption');
@@ -17,7 +18,7 @@
       if (customBare && isValidUrl(customBare)) {
         localStorage.setItem('bare', customBare);
         localStorage.setItem('bareOption', 'custom');
-        updateProxyConfig(customBare);
+        applyCustomBare(customBare);
         alert('Custom bare URL saved successfully!');
       } else {
         alert('Please enter a valid URL.');
@@ -26,7 +27,7 @@
     } else {
       localStorage.setItem('bare', selectedOption);
       localStorage.setItem('bareOption', selectedOption);
-      updateProxyConfig(selectedOption);
+      applyCustomBare(selectedOption);
     }
   }
 
@@ -40,9 +41,17 @@
     }
   }
 
-  // Function to update the proxy configuration dynamically
-  function updateProxyConfig(bareUrl) {
-    // Since the config file is static, you would need to reload the page to apply changes
-    // For demo purposes, we'll just log the update
-    console.log('Proxy bare URL updated to:', bareUrl);
+  // Function to apply the new bare URL to the proxy config
+  function applyCustomBare(bareUrl) {
+    // Assuming Ultraviolet is using a service worker or similar mechanism
+    if (self.__uv$config) {
+      self.__uv$config.bare = bareUrl;
+      console.log('Updated bare URL:', bareUrl);
+
+      // Reload the page to apply new config
+      // You might need to reload or reinitialize Ultraviolet here
+      location.reload();
+    } else {
+      console.log('Ultraviolet config not available.');
+    }
   }
