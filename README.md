@@ -6,10 +6,7 @@
 <h1 align="center" style="color: #b03232;">PLEXILE ARCADE v6</h1>
 <p align="center">PLEXILE ARCADE, The Best Game Website in the world!</p>
 
-<br>
-<h2 align="center" style="color: #b03232;">Creating A PLEXILE ARCADE Link 🔗</h2>
-<p align="center">First you will have to click on one of the boxes:</p>
-<br>
+
 <div align="center">
   <a target="_blank" href="https://replit.com/github/PLEXILENetwork/v5">
     <img alt="Run on Replit" src="https://binbashbanana.github.io/deploy-buttons/buttons/remade/replit.svg">
