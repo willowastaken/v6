@@ -44,7 +44,7 @@
             z-index: -1; 
         }
 
- #bareSelect {
+  #bareSelect {
     border: 2px solid #242222;
     background-color: #111111;
     color: white;
@@ -52,11 +52,18 @@
     padding: 6px;
     border-radius: 5px;
     transition: box-shadow 0.3s ease; 
+    outline: none; 
   }
 
   #bareSelect:hover, 
   #bareSelect:focus { 
     box-shadow: 0 0 5px #C93131; 
+    outline: none; 
+  }
+
+  #bareSelect option {
+    background-color: #111111;
+    color: white; 
   }
     </style>
     
