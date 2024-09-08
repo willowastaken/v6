@@ -179,7 +179,63 @@
             <br>
           <center><p>A Bare Is a link that allows the proxy to work, Although this link could be blocked So theirs a variety of Bares In Case.</p></center>
             <br>
+<!-- Bare Selection -->
+<center>
+  <label for="bareSelect">Choose a Bare:</label>
+  <select id="bareSelect" onchange="updateBare()">
+    <option value="https://bonkerbankers-xyz.onrender.com/bare/" selected>Bonkerbankers Bare</option>
+    <option value="https://examplebare1.com/bare/">Example Bare 1</option>
+    <option value="https://examplebare2.com/bare/">Example Bare 2</option>
+    <option value="custom">Custom Bare</option>
+  </select>
+  <br><br>
+  <!-- Input for Custom Bare -->
+  <input type="text" id="customBareInput" placeholder="Enter custom Bare URL" style="display: none;" oninput="updateBare()" />
+</center>
+
+<script>
+  window.onload = function () {
+    const savedBare = localStorage.getItem('selectedBare');
+    if (savedBare) {
+      if (savedBare === 'custom') {
+        document.getElementById('bareSelect').value = 'custom';
+        document.getElementById('customBareInput').style.display = 'inline';
+        document.getElementById('customBareInput').value = localStorage.getItem('customBare') || '';
+      } else {
+        document.getElementById('bareSelect').value = savedBare;
+      }
+      setBare(savedBare);
+    }
+  };
+
+  function updateBare() {
+    const select = document.getElementById("bareSelect");
+    const customBareInput = document.getElementById("customBareInput");
+
+    if (select.value === "custom") {
+      customBareInput.style.display = "inline";
+      setBare(customBareInput.value);
+    } else {
+      customBareInput.style.display = "none";
+      setBare(select.value);
+    }
+
+    // Save to localStorage
+    localStorage.setItem('selectedBare', select.value);
+    if (select.value === "custom") {
+      localStorage.setItem('customBare', customBareInput.value);
+    }
+  }
+
+  function setBare(bareUrl) {
+    if (bareUrl) {
+      self.__uv$config.bare = bareUrl; // Update the bare URL in the config
+      console.log("Bare URL set to: " + bareUrl); // For debugging
+    }
+  }
+</script>
         </div>
+        
 
         <div class="box">
           <br>
