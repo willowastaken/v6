@@ -43,6 +43,21 @@
             opacity: 1; 
             z-index: -1; 
         }
+
+ #bareSelect {
+    border: 2px solid #242222;
+    background-color: #111111;
+    color: white;
+    box-shadow: 0 0 5px #000;
+    padding: 6px;
+    border-radius: 5px;
+    transition: box-shadow 0.3s ease; 
+  }
+
+  #bareSelect:hover, 
+  #bareSelect:focus { 
+    box-shadow: 0 0 5px #C93131; 
+  }
     </style>
     
     <div id="loader">
@@ -180,7 +195,7 @@
           <center><p>A Bare Is a link that allows the proxy to work, Although this link could be blocked So theirs a variety of Bares In Case.</p></center>
             
 <center>
-  <select id="bareSelect" onchange="updateBare()" style="border: 2px solid #242222; background-color: #111111; color: white; box-shadow: 0 0 10px #000; padding: 10px; border-radius: 5px;">
+  <select id="bareSelect" onchange="updateBare()">
     <option value="https://bonkerbankers-xyz.onrender.com/bare/" selected>Default</option>
     <option value="https://sunset-network.vercel.app/bare/">Vercel (vercel.app)</option>
     <option value="https://bare.elephantmunchingcontest.tech/">FreeDNS (elephantmunchingcontest.tech/)</option>
@@ -202,7 +217,7 @@
         setBare(savedBare);
       }
     } else {
-
+      
       setBare('https://bonkerbankers-xyz.onrender.com/bare/');
     }
   };
@@ -218,7 +233,7 @@
         localStorage.setItem('customBare', customBareUrl);
         alert("Custom Bare URL saved successfully!");
       } else {
-
+        
         select.value = localStorage.getItem('selectedBare') || 'https://bonkerbankers-xyz.onrender.com/bare/';
       }
     } else {
@@ -230,7 +245,7 @@
   function setBare(bareUrl) {
     if (bareUrl) {
       self.__uv$config.bare = bareUrl;
-      console.log("Bare URL set to: " + bareUrl);
+      console.log("Bare URL set to: " + bareUrl); 
     }
   }
 </script>
