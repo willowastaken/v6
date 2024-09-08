@@ -21,3 +21,16 @@
   </a>
 </div>
 
+<br>
+
+## Features
+- Modern and clean design
+- Support for many popular sites
+- Customizable interface
+- Mobile support
+- Expansive library of themes
+- Large selection of games thanks to [Radon Games!](https://github.com/Radon-Games/Radon-Games/)
+
+  <br>
+  ## License
+Metallic uses the AGPL-3.0 license.
