@@ -15,7 +15,7 @@
             "heroin", "meth", "buy guns", "deep web", "dark web", "black market", "counterfeit",
             "hack", "hacker", "hacking", "credit card fraud", "piracy", "torrent", "murder",
             "massacre", "torture", "gore", "self-harm", "cut yourself",
-            "gun", "phishing", "s3x", "Nigerian prince", "SSN", "social security number"
+            "gun", "phishing", "s3x", "SSN", "social security number"
         ];
 
     const blockedKeywordPatterns = [
