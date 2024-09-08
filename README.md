@@ -4,6 +4,7 @@
 </kbd>
 </p>
 <h1 align="center" style="color: #b03232;">PLEXILE ARCADE v6</h1>
+<h3>The Website With The Best GAMES!</h3>
 <p align="center">Join PLEXILE ARCADE Now & Get to Arcading at School!</p>
 
 
