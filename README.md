@@ -7,8 +7,6 @@
 <h3 align="center">The Website With The Best GAMES!</h3></center>
 <p align="center">Join PLEXILE ARCADE Now & Get to Arcading during School Hours!</p>
 
-<br>
-
 <div align="center">
   <a target="_blank" href="https://vercel.com/new/clone?repository-url=https://replit.com/github/PLEXILENetwork/v5">
     <img alt="Deploy to Vercel" src="https://binbashbanana.github.io/deploy-buttons/buttons/remade/vercel.svg">
