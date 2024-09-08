@@ -224,7 +224,6 @@
         setBare(savedBare);
       }
     } else {
-      
       setBare('https://bonkerbankers-xyz.onrender.com/bare/');
     }
   };
@@ -240,7 +239,6 @@
         localStorage.setItem('customBare', customBareUrl);
         alert("Custom Bare URL saved successfully!");
       } else {
-        
         select.value = localStorage.getItem('selectedBare') || 'https://bonkerbankers-xyz.onrender.com/bare/';
       }
     } else {
@@ -252,10 +250,20 @@
   function setBare(bareUrl) {
     if (bareUrl) {
       self.__uv$config.bare = bareUrl;
-      console.log("Bare URL set to: " + bareUrl); 
+      localStorage.setItem('selectedBare', bareUrl); 
+      console.log("Bare URL set to: " + bareUrl);
+
+      reloadUvConfig();
     }
   }
+
+  function reloadUvConfig() {
+    const config = document.createElement('script');
+    config.src = '/static/uv/uv.config.js';
+    document.head.appendChild(config);
+  }
 </script>
+
 
 </div>
 
