@@ -16,7 +16,7 @@
       if (customBare && isValidUrl(customBare)) {
         localStorage.setItem('bare', customBare);
         localStorage.setItem('bareOption', 'custom');
-        updateProxyConfig(customBare);
+        applyCustomBare(customBare);
         alert('Custom bare URL saved successfully!');
       } else {
         alert('Please enter a valid URL.');
@@ -25,11 +25,11 @@
     } else {
       localStorage.setItem('bare', selectedOption);
       localStorage.setItem('bareOption', selectedOption);
-      updateProxyConfig(selectedOption);
+      applyCustomBare(selectedOption);
     }
   }
 
-function isValidUrl(url) {
+  function isValidUrl(url) {
     try {
       new URL(url);
       return true;
@@ -38,6 +38,13 @@ function isValidUrl(url) {
     }
   }
 
-  function updateProxyConfig(bareUrl) {
-    console.log('Proxy bare URL updated to:', bareUrl);
+  function applyCustomBare(bareUrl) {
+    if (self.__uv$config) {
+      self.__uv$config.bare = bareUrl;
+      console.log('Updated bare URL:', bareUrl);
+
+      location.reload();
+    } else {
+      console.log('Ultraviolet config not available.');
+    }
   }
