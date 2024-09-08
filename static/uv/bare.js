@@ -1,4 +1,3 @@
-// /static/uv/dynamic-config.js
 window.onload = function() {
     const savedBare = localStorage.getItem('bare');
     const savedOption = localStorage.getItem('bareOption');
@@ -24,7 +23,7 @@ function updateBare() {
             alert('Custom bare URL saved successfully!');
         } else {
             alert('Please enter a valid URL.');
-            select.value = 'custom'; // Reset to custom if invalid input
+            select.value = 'custom'; 
         }
     } else {
         localStorage.setItem('bare', selectedOption);
@@ -44,11 +43,10 @@ function isValidUrl(url) {
 
 function applyCustomBare(bareUrl) {
     if (typeof Ultraviolet !== 'undefined') {
-        Ultraviolet.config.bare = bareUrl; // Update configuration dynamically
+        Ultraviolet.config.bare = bareUrl; 
         console.log('Updated bare URL:', bareUrl);
 
-        // Optionally reload or reinitialize components if needed
-        location.reload(); // Use if necessary to apply changes
+        location.reload(); 
     } else {
         console.log('Ultraviolet or client-side config not available.');
     }
