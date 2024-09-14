@@ -51,6 +51,29 @@ element {
             opacity: 1; 
             z-index: -1; 
         }
+
+        #loader {
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
+.rect1, .rect2, .rect3, .rect4, .rect5 {
+  background-color: #C93131;
+  height: 40px;
+  width: 8px;
+  display: inline-block;
+  animation: scaleAnimation 1.2s infinite ease-in-out;
+}
+
+@keyframes scaleAnimation {
+  0%, 40%, 100% { transform: scaleY(0.4) }  
+  20% { transform: scaleY(1.0) }
+}
+
     </style>
 
 </head>
