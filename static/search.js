@@ -1,68 +1,31 @@
-"use strict";
-
-const form = document.getElementById("uv-form");
-const address = document.getElementById("uv-address");
-const searchEngine = document.getElementById("uv-search-engine");
-const loader = document.getElementById("loader");
-const iframe = document.createElement("iframe"); // This will be the container for the proxied page
-
-// Style iframe
-iframe.style.width = "100%";
-iframe.style.height = "100vh";
-iframe.style.border = "none";
-
-// Append the iframe to the body or a container
-document.body.appendChild(iframe);
-
-// Function to show the loader
-function showLoader() {
-    loader.style.display = "block";  // Assuming "block" shows the loader
-}
-
-// Function to hide the loader
-function hideLoader() {
-    loader.style.display = "none";  // Assuming "none" hides the loader
-}
-
-/**
- *
- * @param {string} input
- * @param {string} template Template for a search query.
- * @returns {string} Fully qualified URL
- */
-function search(input, template) {
-    try {
-        // input is a valid URL
-        return new URL(input).toString();
-    } catch (err) {
-        // input was not a valid URL
-    }
-
-    try {
-        // input is a valid URL when http:// is added
-        const url = new URL(`http://${input}`);
-        if (url.hostname.includes(".")) return url.toString();
-    } catch (err) {
-        // input was not a valid URL
-    }
-
-    // Treat the input as a search query
-    return template.replace("%s", encodeURIComponent(input));
-}
-
-// On form submission
-form.addEventListener("submit", function (e) {
-    e.preventDefault();  // Prevent the form from reloading the page
-
-    const query = search(address.value, searchEngine.value);
-    showLoader();  // Show the loader when the search starts
+document.getElementById('uv-form').addEventListener('submit', function (e) {
+    e.preventDefault(); // Prevent default form submission
     
-    // Load the proxied content into the iframe
-    iframe.src = `/static/embed.html#${query}`;
-});
+    // Show loader
+    document.getElementById('loader').style.display = 'block';
+    
+    // Fetch the URL from the input field
+    const input = document.getElementById('uv-address').value;
+    const searchEngine = document.getElementById('uv-search-engine').value;
 
-// Hide loader when iframe content finishes loading
-iframe.addEventListener("load", function () {
-    hideLoader();  // Hide the loader once the iframe is loaded
+    // Use the search function to create a fully qualified URL or search query
+    const targetUrl = search(input, searchEngine);
+    
+    // Create an iframe to display the search result or URL
+    const iframe = document.createElement('iframe');
+    iframe.src = targetUrl;
+    iframe.style.width = '100%';
+    iframe.style.height = '600px'; // Adjust height as needed
+    
+    // When the iframe is loaded, hide the loader
+    iframe.onload = function() {
+        document.getElementById('loader').style.display = 'none';
+    };
+    
+    // Append the iframe to the container on the page
+    const container = document.querySelector('.container');
+    container.appendChild(iframe);
+    
+    // Optionally, reset the input field
+    document.getElementById('uv-address').value = '';
 });
-
