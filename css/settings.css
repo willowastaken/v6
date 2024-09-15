@@ -18,11 +18,11 @@
 
 .box, .box2 {
     width: 370px;  
-    height: 245px;
+    height: 255px;
     background-color: #;
     border: 2px solid #242222;
     border-radius: 6px; 
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.8); 
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.8); 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
