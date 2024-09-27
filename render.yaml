@@ -1,0 +1,5 @@
+ services:
+  - type: web
+    name: educational-website
+    env: node
+    plan: free
