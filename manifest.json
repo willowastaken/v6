@@ -8,14 +8,16 @@
 
   "display": "standalone", 
 
-  "icons": [{ 
+  "icons": [
+    { 
 
-    "src": "images/plexilearcade.png", 
+    "src": "/images/plexilearcade.png", 
 
     "sizes": "512x512", 
 
     "type": "image/png" 
 
-  }] 
+  }
+] 
 
 }
