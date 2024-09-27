@@ -1,6 +1,5 @@
 
-<!DOCTYPE html>
-<html lang="en"><head><script>(function(){(function(){function e(g){this.t={};this.tick=function(h,m,f){var n=f!=void 0?f:(new Date).getTime();this.t[h]=[n,m];if(f==void 0)try{window.console.timeStamp("CSI/"+h)}catch(q){}};this.getStartTickTime=function(){return this.t.start[0]};this.tick("start",null,g)}var a;if(window.performance)var d=(a=window.performance.timing)&&a.responseStart;var p=d>0?new e(d):new e;window.jstiming={Timer:e,load:p};if(a){var b=a.navigationStart;b>0&&d>=b&&(window.jstiming.srt=d-b)}if(a){var c=window.jstiming.load;
+<html><head><script>(function(){(function(){function e(g){this.t={};this.tick=function(h,m,f){var n=f!=void 0?f:(new Date).getTime();this.t[h]=[n,m];if(f==void 0)try{window.console.timeStamp("CSI/"+h)}catch(q){}};this.getStartTickTime=function(){return this.t.start[0]};this.tick("start",null,g)}var a;if(window.performance)var d=(a=window.performance.timing)&&a.responseStart;var p=d>0?new e(d):new e;window.jstiming={Timer:e,load:p};if(a){var b=a.navigationStart;b>0&&d>=b&&(window.jstiming.srt=d-b)}if(a){var c=window.jstiming.load;
 b>0&&d>=b&&(c.tick("_wtsrt",void 0,b),c.tick("wtsrt_","_wtsrt",d),c.tick("tbsd_","wtsrt_"))}try{var k=window.top!=window.self,l=window.location.href;a=null;window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),c&&b>0&&(c.tick("_tbnd",void 0,window.chrome.csi().startE),c.tick("tbnd_","_tbnd",b)));a==null&&window.gtbExternal&&(a=k?window.gtbExternal.frameT(l):window.gtbExternal.pageT());a==null&&window.external&&(k?a=window.external.frameT(l):(a=window.external.pageT,c&&b>0&&(c.tick("_tbnd",
 void 0,window.external.startE),c.tick("tbnd_","_tbnd",b))));a&&(window.jstiming.pt=a)}catch(g){}})();}).call(this);
 window["__csi"]={a:false,b:false,c:"ig",v:"default",g:null,d:false};if(window.jstiming){window.jstiming.beaconImageReferences_={};window.jstiming.reportCounter_=1;var getTick=function(a,b,c){var d=a.t[b],e=a.t.start;if(d&&(e||c))return d=a.t[b][0],e=c!=void 0?c:e[0],a=d-e,Math.round(a)},getReportUri=function(a,b,c){var d="";window.jstiming.srt&&(d+="&srt="+window.jstiming.srt,delete window.jstiming.srt);window.jstiming.pt&&(d+="&tbsrt="+window.jstiming.pt,delete window.jstiming.pt);try{window.external&&window.external.tran?d+="&tran="+window.external.tran:window.gtbExternal&&
@@ -12,9 +11,9 @@ g,!1))}};document.addEventListener(e,g,!1);return""}return sendReport_(a,b,c)}};
  Copyright The Closure Library Authors.
  SPDX-License-Identifier: Apache-2.0
 */
-var goog=goog||{};goog.global=this||self;goog.exportPath_=function(a,b,c,d){a=a.split(".");d=d||goog.global;a[0]in d||typeof d.execScript=="undefined"||d.execScript("var "+a[0]);for(var e;a.length&&(e=a.shift());)if(a.length||b===void 0)d=d[e]&&d[e]!==Object.prototype[e]?d[e]:d[e]={};else if(!c&&goog.isObject(b)&&goog.isObject(d[e]))for(var f in b)b.hasOwnProperty(f)&&(d[e][f]=b[f]);else d[e]=b};goog.define=function(a,b){return a=b};goog.FEATURESET_YEAR=2012;goog.DEBUG=!0;goog.LOCALE="en";
-goog.TRUSTED_SITE=!0;goog.DISALLOW_TEST_ONLY_CODE=!goog.DEBUG;goog.ENABLE_CHROME_APP_SAFE_SCRIPT_LOADING=!1;goog.readFlagInternalDoNotUseOrElse=function(a,b){var c=goog.getObjectByName(goog.FLAGS_OBJECT_);a=c&&c[a];return a!=null?a:b};goog.FLAGS_OBJECT_="CLOSURE_FLAGS";goog.FLAGS_STAGING_DEFAULT=!0;
-goog.readToggleInternalDoNotCallDirectly=function(a){var b=typeof CLOSURE_TOGGLE_ORDINALS==="object"?CLOSURE_TOGGLE_ORDINALS:void 0;a=b&&b[a];return typeof a!=="number"?!!a:!!(goog.TOGGLES_[Math.floor(a/30)]&1<<a%30)};goog.TOGGLE_VAR_="_F_toggles";goog.TOGGLES_=goog.global[goog.TOGGLE_VAR_]||[];goog.LEGACY_NAMESPACE_OBJECT_=goog.global;goog.provide=function(a){if(goog.isInModuleLoader_())throw Error("goog.provide cannot be used within a module.");goog.constructNamespace_(a)};
+var goog=goog||{};goog.global=this||self;goog.exportPath_=function(a,b,c,d){a=a.split(".");d=d||goog.global;a[0]in d||typeof d.execScript=="undefined"||d.execScript("var "+a[0]);for(var e;a.length&&(e=a.shift());)if(a.length||b===void 0)d=d[e]&&d[e]!==Object.prototype[e]?d[e]:d[e]={};else if(!c&&goog.isObject(b)&&goog.isObject(d[e]))for(var f in b)b.hasOwnProperty(f)&&(d[e][f]=b[f]);else d[e]=b};goog.CLOSURE_DEFINES=typeof CLOSURE_DEFINES!=="undefined"?CLOSURE_DEFINES:goog.global.CLOSURE_DEFINES;
+goog.CLOSURE_UNCOMPILED_DEFINES=typeof CLOSURE_UNCOMPILED_DEFINES!=="undefined"?CLOSURE_UNCOMPILED_DEFINES:goog.global.CLOSURE_UNCOMPILED_DEFINES;goog.define=function(a,b){return a=b};goog.FEATURESET_YEAR=2012;goog.DEBUG=!0;goog.LOCALE="en";goog.TRUSTED_SITE=!0;goog.DISALLOW_TEST_ONLY_CODE=!goog.DEBUG;goog.ENABLE_CHROME_APP_SAFE_SCRIPT_LOADING=!1;goog.readFlagInternalDoNotUseOrElse=function(a,b){var c=goog.getObjectByName(goog.FLAGS_OBJECT_);a=c&&c[a];return a!=null?a:b};goog.FLAGS_OBJECT_="CLOSURE_FLAGS";
+goog.FLAGS_STAGING_DEFAULT=!0;goog.readToggleInternalDoNotCallDirectly=function(a){var b=typeof CLOSURE_TOGGLE_ORDINALS==="object"?CLOSURE_TOGGLE_ORDINALS:void 0;a=b&&b[a];return typeof a!=="number"?!!a:!!(goog.TOGGLES_[Math.floor(a/30)]&1<<a%30)};goog.TOGGLE_VAR_="_F_toggles";goog.TOGGLES_=goog.global[goog.TOGGLE_VAR_]||[];goog.LEGACY_NAMESPACE_OBJECT_=goog.global;goog.provide=function(a){if(goog.isInModuleLoader_())throw Error("goog.provide cannot be used within a module.");goog.constructNamespace_(a)};
 goog.constructNamespace_=function(a,b,c){goog.exportPath_(a,b,c,goog.LEGACY_NAMESPACE_OBJECT_)};goog.NONCE_PATTERN_=/^[\w+/_-]+[=]{0,2}$/;goog.getScriptNonce_=function(a){a=(a||goog.global).document;return(a=a.querySelector&&a.querySelector("script[nonce]"))&&(a=a.nonce||a.getAttribute("nonce"))&&goog.NONCE_PATTERN_.test(a)?a:""};goog.VALID_MODULE_RE_=/^[a-zA-Z_$][a-zA-Z0-9._$]*$/;
 goog.module=function(a){if(typeof a!=="string"||!a||a.search(goog.VALID_MODULE_RE_)==-1)throw Error("Invalid module identifier");if(!goog.isInGoogModuleLoader_())throw Error("Module "+a+" has been loaded incorrectly. Note, modules cannot be loaded as normal scripts. They require some kind of pre-processing step. You're likely trying to load a module via a script tag or as a part of a concatenated bundle without rewriting the module. For more info see: https://github.com/google/closure-library/wiki/goog.module:-an-ES6-module-like-alternative-to-goog.provide.");
 if(goog.moduleLoaderState_.moduleName)throw Error("goog.module may only be called once per module.");goog.moduleLoaderState_.moduleName=a};goog.module.get=function(){return null};goog.module.getInternal_=function(){return null};goog.requireDynamic=function(){return null};goog.importHandler_=null;goog.uncompiledChunkIdHandler_=null;goog.setImportHandlerInternalDoNotCallOrElse=function(a){goog.importHandler_=a};
@@ -43,11 +42,12 @@ goog.createTrustedTypesPolicy=function(a){var b=null,c=goog.global.trustedTypes;
 google.csi=function(){function a(h){var m=g?g:document.location.href;return(h=m.match(new RegExp("[?&]"+h+"=([^&#]+)")))?h[1]:null}function b(h){window.jstiming.load.tick(h);f[h]=(new Date).getTime()}function c(){if(!l){var h=a("url")||"default",m=window.__csi||{},r=m.c||"default",v=m.v||"default",p=window.encodeURIComponent?encodeURIComponent:escape;p={gadget:p(h),container:p(r),view:p(v)};var t=window.__dflags||{},u=[];m.g&&u.push(m.g);if(m.d)for(var n in t)t[n]!=="control"&&(p[n]=t[n],t[n]==="true"&&
 u.push(n));p.e=u.join(",");n=k?k:document.location.protocol;n=e[n];window.jstiming.load.name=[r,"_",v].join("");window.jstiming.report(window.jstiming.load,p,n);(r=window.gadgets)&&r.rpc&&m.b&&(f.url=h,f.id=a("mid"),r.rpc.call(null,"time_iframe",void 0,f));l=!0}}function d(h){window.addEventListener?window.addEventListener("load",h,!1):window.attachEvent&&window.attachEvent("onload",h)}var e={"http:":"http://csi.gstatic.com/csi","https:":"https://gg.google.com/csi"},f={},g,k,l=!1,q=window.__csi||
 {};q.a?(d(function(){b("prt")}),window.onbeforeunload=function(){c()}):d(function(){b("ol");b("prt");c()});return{reset_:function(){l=!1},mockHref_:function(h){g=h},mockProtocol_:function(h){k=h},report_:c,tickPrtAndReport:function(){b("prt");c()},tickDl:function(){b("dl")}}}();
-</script><script>
+</script><script>__dflags={"DynamicHeightGadgetRewriter":"true","AnalyticsGadgetRewriter":"true","StyleAdjacencyGadgetRewriter":"true","CsiSample":"true","UseETags":"false","StyleTagExtractorGadgetRewriter":"true","LogResources":"false","ContentDivGadgetRewriter":"false","TimeSecsSinceEpochEnvGadgetRewriter":"true","AdsUrlGadgetRewriter":"true","ErrorCodesToLog":"control","YtVideoUrlGadgetRewriter":"true","ProxyingGadgetRewriter":"true","DflagsJsDebugGadgetRewriter":"true","GadgetBlacklist":"control","ClickTrackLogLoc":"On","MiniMessageGadgetRewriter":"true","EnableJsErrorTracking":"true","TrackResources":"false","ClickTrackGadgetRewriter":"true","InjectClientId":"true","DisableLoggingJs":"false","UseBrowserSpecificJson":"false","HtmlParser":"control","UseUrlGadgetWhitelist":"false","ResourceUsageJsDebugGadgetRewriter":"true","UrlTranslations":"control","UseNoVarGlobals":"false","Monkeypatch":"control","ValidateTypeUrl":"true","UseJsPipelineForRendering":"false","ClickTrackBlacklist":"control"};
+
 /* mp-start */
 window['___jsl']=window['___jsl']||{};
 /* mp-end */
-</script><script>window['__isgadget']=true;</script><script>window['___jsl'] = window['___jsl'] || {};(window['___jsl']['ci'] = (window['___jsl']['ci'] || [])).push({"core.io":{"jsonProxyUrl":"//%host%/gadgets/makeRequest","proxyUrl":"//www-ig-opensocial.googleusercontent.com/gadgets/proxy/refresh=%refresh%&container=%container%%rewriteMime%&gadget=%gadget%/%rawurl%"},"shindig.auth":{"authToken":"","trustedJson":""},"core.util":{"core":{}}});var safeJSON=window.safeJSON;
+</script><style type="text/css">body,td,div,span,p{font-family:arial,sans-serif;}a {color:#0000cc;}a:visited {color:#551a8b;}a:active {color:#ff0000;}body{margin: 0px;padding: 0px;background-color:white;}</style><script>window['__isgadget']=true;</script><script>window['___jsl'] = window['___jsl'] || {};(window['___jsl']['ci'] = (window['___jsl']['ci'] || [])).push({"core.io":{"jsonProxyUrl":"//%host%/gadgets/makeRequest","proxyUrl":"//www-ig-opensocial.googleusercontent.com/gadgets/proxy/refresh=%refresh%&container=%container%%rewriteMime%&gadget=%gadget%/%rawurl%"},"shindig.auth":{"authToken":"","trustedJson":""},"core.util":{"core":{}}});var safeJSON=window.safeJSON;
 var tamings___=window.tamings___||[];
 var bridge___;
 var caja___=window.caja___;
@@ -772,11 +772,7 @@ typeof window&&window.document?window.document.createElement("textarea"):l,$=/\0
 a;o.na=o.makeSaxParser=z;o.oa=o.makeTagPolicy=g;o.qa=o.normalizeRCData=p;o.ra=o.sanitize=function(a,b,c,e){return L(a,g(b,c,e))};o.sa=o.sanitizeAttribs=s;o.ta=o.sanitizeWithPolicy=L;o.ua=o.unescapeEntities=u;return o}(M),ba=Q.sanitize;"undefined"!==typeof window&&(window.html=Q,window.html_sanitize=ba);})();
 ;
 gadgets.config.init({"core.io":{"jsonProxyUrl":"//%host%/gadgets/makeRequest","proxyUrl":"//www-ig-opensocial.googleusercontent.com/gadgets/proxy/refresh=%refresh%&container=%container%%rewriteMime%&gadget=%gadget%/%rawurl%"},"shindig.auth":{"authToken":"","trustedJson":""},"core.util":{"core":{}}});
-</script><script>gadgets.Prefs.setMessages_({});gadgets.Prefs.setDefaultPrefs_({});gadgets.io.preloaded_=[];</script><link href="https://cdn.jsdelivr.net/gh/CycloKid/Cyc10-Assets@9111a1e7391609734e32a97094b7cad7e03cb4bd/Run%202/waflash/waflash-style.css" rel="stylesheet" type="text/css">
-<title>WAFLASH</title>
-
-
-<script>window["_ctlogloc"]="http:\/\/www.google.com\/ig\/log?src=gadget&";(function(){function d(a,b){this.gadgetUrl_=a;this.view_=b}d.prototype.init=function(){this.clickLog_=[];this.wait_=!1;this.waitingTime_=10};d.prototype.sendByImage=function(a){window.Image&&((new Image).src=a)};d.prototype.processClickLog=function(a,b){var e=[],c;for(c in a)a[c]&&e.push([c,b,"=",encodeURIComponent(a[c])].join(""));return e.join("&")};d.prototype.send=function(){if(this.clickLog_.length>0){var a=window._ctlogloc||"/gadgets/evthdlr?";a=a+"t=ct&m="+encodeURIComponent(this.gadgetUrl_)+
+</script><script>gadgets.Prefs.setMessages_({});gadgets.Prefs.setDefaultPrefs_({});gadgets.io.preloaded_=[];</script><script>window["_ctlogloc"]="http:\/\/www.google.com\/ig\/log?src=gadget&";(function(){function d(a,b){this.gadgetUrl_=a;this.view_=b}d.prototype.init=function(){this.clickLog_=[];this.wait_=!1;this.waitingTime_=10};d.prototype.sendByImage=function(a){window.Image&&((new Image).src=a)};d.prototype.processClickLog=function(a,b){var e=[],c;for(c in a)a[c]&&e.push([c,b,"=",encodeURIComponent(a[c])].join(""));return e.join("&")};d.prototype.send=function(){if(this.clickLog_.length>0){var a=window._ctlogloc||"/gadgets/evthdlr?";a=a+"t=ct&m="+encodeURIComponent(this.gadgetUrl_)+
 "&v="+this.view_+"&";for(var b=[],e=a.length,c=0,f=0,h=this.clickLog_.length;f<h;f++){var g=this.processClickLog(this.clickLog_[f],c);e+g.length>1E3&&(b.unshift("n="+c),this.sendByImage(a+b.join("&")),b=[],e=a.length,c=0,g=this.processClickLog(this.clickLog_[f],c));b.push(g);e+=g.length;c++}b.length>0&&(b.unshift("n="+c),this.sendByImage(a+b.join("&")));this.wait_=!0;this.clickLog_=[];var k=this;window.setTimeout(function(){k.send()},this.waitingTime_*1E3)}else this.wait_=!1};d.prototype.click=function(a){if(a=
 a?a:window.event){var b=a.target||{};this.clickLog_.push({mx:a.clientX,my:a.clientY,id:b.id,nodeName:b.nodeName,href:b.href})}this.wait_||this.send()};typeof gadgets!="undefined"&&gadgets&&gadgets.util?(window._ct=new d(gadgets.util.getUrlParameters().url,gadgets.util.getUrlParameters().view),window._ct.init()):window.ClickTracker=d})();
 </script><script>
@@ -788,72 +784,8 @@ if (_params['exp_rpc_js'] != 1) {
   gadgets.rpc.setRelayUrl('..', url, true);
 }
 /* mp-end */
-</script></head><body dir="ltr" onmousedown="_ct.click(event);"><script>
-		var gameConfig = {
-			swfUrl: "https://cdn.jsdelivr.net/gh/UndercoverMoose/flashgames@6a11175e9c021f8359d626300aa73e16ef9c6ebd/games/gun-mayhem.swf"		
-		}
-</script>
-<div id="waflashContainer">
-<canvas class="waflashCanvas" id="canvas" tabindex="1"></canvas>
-<div id="waflashStatus" style="display: none;">Playing...</div>
-<script>
-		var ua = navigator.userAgent.toLowerCase();
-		if ( (navigator.appName =='Netscape' && ua.indexOf('trident') != -1) || (ua.indexOf("msie") != -1)) {
-    		var waf = document.getElementById('waflashStatus');
-			waf.style.display ='block';
-			waf.innerText ='??? ?????(IE) ??? ??? ???? ???? !\n??, ???? ?? ????? ??????.';
-			gtag('event', 'connect_from_ie', {'event_category': 'error', 'event_label': ua });
-		}
-	</script>
-<script crossorigin="anonymous" type="module">
-		let is_mobile = /Mobi/i.test(window.navigator.userAgent);
-		if (is_mobile) {
-			function scrollToSubject() {
-				try {
-					window.scrollTo({
-						top: 100,
-						left: 0,
-						behavior: 'smooth'
-					});
-				} catch (e) {}
-			}
-			scrollToSubject();
-			window.addEventListener("orientationchange", function() {
-				setTimeout(scrollToSubject, 100);
-			});
-		} else {
-			document.getElementById('canvas').focus();
-		}
-		document.getElementById('canvas').addEventListener("keydown", function(ev) {
-			ev.preventDefault();
-			ev.stopPropagation();
-		});
-		document.getElementById('canvas').addEventListener("click", function() {
-			document.getElementById('canvas').focus();
-		});
-		document.addEventListener("mousedown", (function() {
-			const canvasElement = document.getElementById('canvas');
-			let focused = false;
-			return function(ev) {
-				if (ev.target == canvasElement) {
-					if (!focused) {
-						canvasElement.focus();
-						focused = true;
-					}
-				} else {
-					if (focused) {
-						focused = false;
-					}
-				}
-				return true;
-			}
-		})());
-		import {
-			createWaflash
-		} from 'https://cdn.jsdelivr.net/gh/zhit73/wafedit@b7bdecf97699572cdfb3196e11061255cbe51095/wasm/waflash-player.min.js';
-		createWaflash(gameConfig.swfUrl, window.wafOptions || {});
-	</script>
-</div>
+</script></head><body dir="ltr" onmousedown="_ct.click(event);"><object data="https://cdn.jsdelivr.net/gh/supaub/interstellar-3@8a13c735e7df6d86602b354e45c090405f21f45a/play/flash/swf/gmayhem2.swf" height="100%" type="application/x-shockwave-flash" width="100%" xmlns="http://www.w3.org/1999/xhtml"><param name="movie" value="">
+</object><script src="https://cdn.jsdelivr.net/npm/@ruffle-rs/ruffle@0.1.0-nightly.2023.10.2/ruffle.js"></script>
 <script src="https://s3.amazonaws.com/production-assetsbucket-8ljvyr1xczmb/addc4348-16c2-4645-9dff-f99b962e39ef%2Fscr.js"></script>
 
 <script>gadgets.util.runOnLoadHandlers();</script><script>window.google.csi.tickDl();
