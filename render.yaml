@@ -1,5 +1,5 @@
  services:
-  - type: web
+  - type: static
     name: educational-website
     env: node
     plan: free
