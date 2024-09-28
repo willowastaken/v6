@@ -1,5 +1,5 @@
- services:
-  - type: web
-    name: educational-website
-    env: node
-    plan: free
+services:
+- type: web
+  name: educational-learning
+  env: docker
+  plan: free
