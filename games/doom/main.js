@@ -90,7 +90,7 @@ var importObject = {
     }
 };
 
-WebAssembly.instantiateStreaming(fetch('https://cdn.glitch.global/b210365d-a91f-48c7-9773-68ad2ec7d08a/doom.wasm?v=1727492692940'), importObject)
+WebAssembly.instantiateStreaming(fetch('doom.wasm'), importObject)
     .then(obj => {
 
     /*Initialize Doom*/
