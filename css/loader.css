@@ -8,7 +8,7 @@ body, html {
 }
 
 #loader {
-  position: fixed;
+  position: fixed; 
   top: 0;
   left: 0;
   width: 100%;
@@ -18,30 +18,37 @@ body, html {
   align-items: center;
   background-color: #111111;
   z-index: 9999;
-  transition: opacity 0.5s ease-out;
-  flex-direction: column; /* Ensures text is below the loader */
+  transition: opacity 0.5s ease-out; 
+  flex-direction: column; /* Ensures random text appears below the loader bars */
 }
 
-#loader-bars {
-  display: flex; /* Keep the loader bars in a row */
-}
-
-#loader-bars div {
+#loader div {
   background-color: #C93131;
-  height: 40px;
-  width: 10px;
-  margin: 0 2px;
-  border-radius: 2px;
-  animation: loaderAnimation 1.8s infinite ease-in-out;
+  height: 40px; 
+  width: 10px; 
+  margin: 2px;
+  border-radius: 2px; 
+  animation: loaderAnimation 1.8s infinite ease-in-out; 
 }
 
-#loader-bars .rect2 { animation-delay: -1.6s; }
-#loader-bars .rect3 { animation-delay: -1.4s; }
-#loader-bars .rect4 { animation-delay: -1.2s; }
-#loader-bars .rect5 { animation-delay: -1.0s; }
+#loader .rect2 {
+  animation-delay: -1.6s;
+}
+
+#loader .rect3 {
+  animation-delay: -1.4s;
+}
+
+#loader .rect4 {
+  animation-delay: -1.2s;
+}
+
+#loader .rect5 {
+  animation-delay: -1.0s;
+}
 
 @keyframes loaderAnimation {
-  0%, 40%, 100% { transform: scaleY(0.4); }
+  0%, 40%, 100% { transform: scaleY(0.4); }  
   20% { transform: scaleY(1.0); }
 }
 
@@ -50,12 +57,12 @@ body, html {
 }
 
 .fade-out {
-  opacity: 0;
-  pointer-events: none;
+  opacity: 0; 
+  pointer-events: none; 
 }
 
 #random-text {
-  margin-top: 20px; /* Space between loader and text */
+  margin-top: 20px; /* Space between loader and random text */
   text-align: center;
   color: #fff;
   font-size: 16px;
