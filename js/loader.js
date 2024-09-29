@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
     randomTextElement.textContent = randomText;
     randomTextElement.id = 'random-text';  // Give it an ID for styling
 
-    // Append the randomTextElement to the loader
+    // Append the randomTextElement below the loader bars
     const loader = document.getElementById('loader');
     loader.appendChild(randomTextElement);
 
