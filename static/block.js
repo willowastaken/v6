@@ -1,18 +1,18 @@
   const blockedSites = [
         "pornhub.com", "xvideos.com", "xhamster.com", "redtube.com", "xnxx.com", "youporn.com",
-        "tube8.com", "badsite.com", "darkweb.com", "fmovies.to", "1337x.to", "thepiratebay.org",
-        "kickass.to", "doxbin.com", "omegle.com", "chaturbate.com", "cam4.com", "chatroulette.com",
+        "tube8.com", "badsite.com", "darkweb.com", "1337x.to", "thepiratebay.org",
+        "kickass.to", "doxbin.com", "chaturbate.com", "cam4.com", "chatroulette.com",
         "ashleymadison.com", "thedarkweb.com"
     ];
 
     const blockedKeywords = [
-        "sex", "porn", "xxx", "hentai", "erotic", "nude", "naked", "blowjob", "anal", "fetish",
-        "hardcore", "gangbang", "masturbation", "camgirl", "dick", "pussy", "dildo", "bdsm",
-        "cum", "homophobic", "xenophobic", "slur", "creampie", "nazi", "kkk", "terrorism", 
+        "sex", "porn", "por n", "p or n", "xxx", "hentai", "erotic", "nude", "naked", "blowjob", "anal", "fetish",
+        "gangbang", "masturbation", "camgirl", "dick", "pussy", "dildo", "bdsm",
+        "cum", "homophobic", "xenophobic", "slur", "creampie", "kkk", "terrorism", 
         "jihad", "doxx", "doxxing", "hate crime", "white supremacy", "drugs", "weed", "cocaine",
         "heroin", "meth", "buy guns", "deep web", "dark web", "black market", "counterfeit",
         "credit card fraud", "piracy", "torrent", "murder", "massacre", "torture", "gore", "self-harm", 
-        "cut yourself", "gun", "phishing", "s3x", "SSN", "social security number"
+        "cut yourself", "phishing", "s3x", "SSN", "social security number"
     ];
 
     const blockedKeywordPatterns = [
