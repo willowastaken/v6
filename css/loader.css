@@ -27,7 +27,8 @@ body, html {
   width: 10px; 
   margin: 2px;
   border-radius: 2px; 
-  animation: loaderAnimation 1.8s infinite ease-in-out; 
+  animation: loaderAnimation 1.8s infinite ease-in-out;
+  display: inline-block; /* Ensures the loader divs are aligned horizontally */
 }
 
 #loader .rect2 {
@@ -61,10 +62,12 @@ body, html {
 }
 
 #random-text {
-  margin-top: 20px; /* Space between loader and random text */
-  text-align: center;
+  position: absolute; /* Make the text positioned relative to the loader */
+  bottom: 20px; /* Place it below the loader */
+  width: 100%;
+  text-align: center; /* Center the text */
   color: #fff;
   font-size: 16px;
-  font-weight: bold; /* Bold text */
+  font-weight: bold; /* Make the text bold */
   opacity: 0.8;
 }
