@@ -31,11 +31,10 @@ document.addEventListener("DOMContentLoaded", function() {
             const loader = document.getElementById('loader');
             loader.classList.add('fade-out');
 
-            loader.addEventListener('animationend', function() {
+            loader.addEventListener('transitionend', function() {
                 loader.style.display = 'none';
                 document.getElementById('content').style.display = 'block';
             });
         }, 1000);
     });
 });
-
