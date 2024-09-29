@@ -28,7 +28,7 @@ body, html {
   margin: 2px;
   border-radius: 2px; 
   animation: loaderAnimation 1.8s infinite ease-in-out;
-  display: inline-block; /* Ensures the loader divs are aligned horizontally */
+  display: inline-block;
 }
 
 #loader .rect2 {
@@ -62,12 +62,25 @@ body, html {
 }
 
 #random-text {
-  position: absolute; /* Make the text positioned relative to the loader */
-  bottom: 20px; /* Place it below the loader */
-  width: 100%;
-  text-align: center; /* Center the text */
+  position: fixed;
+  bottom: 38.5%; 
+  transform: translateX(-50%); 
+  width: auto; 
+  text-align: center; 
   color: #fff;
   font-size: 16px;
-  font-weight: bold; /* Make the text bold */
-  opacity: 0.8;
+  font-weight: bold; 
+  opacity: 0; 
+  animation: fadeInSlideUp 1s forwards; 
+}
+
+@keyframes fadeInSlideUp {
+  0% {
+    opacity: 0; 
+    transform: translateY(10px); 
+  }
+  100% {
+    opacity: 1; 
+    transform: translateY(0); 
+  }
 }
