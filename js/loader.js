@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Array of random texts
+
     const texts = [
         "Loading the best experience...",
         "Preparing your content...",
@@ -13,19 +13,15 @@ document.addEventListener("DOMContentLoaded", function() {
         "Hold on tight, magic is happening..."
     ];
 
-    // Select a random text from the array
     const randomText = texts[Math.floor(Math.random() * texts.length)];
 
-    // Dynamically create the <p> element for random text
     const randomTextElement = document.createElement('p');
     randomTextElement.textContent = randomText;
-    randomTextElement.id = 'random-text';  // Give it an ID for styling
+    randomTextElement.id = 'random-text'; 
 
-    // Append the randomTextElement below the loader bars
     const loader = document.getElementById('loader');
     loader.appendChild(randomTextElement);
 
-    // Add text after the loader bars have loaded
     window.addEventListener('load', function() {
         setTimeout(function() {
             const loader = document.getElementById('loader');
