@@ -19,32 +19,35 @@ body, html {
   background-color: #111111;
   z-index: 9999;
   transition: opacity 0.5s ease-out;
-  flex-direction: column; /* Make everything inside stack vertically */
+  flex-direction: column; /* Ensure text appears below the loader */
 }
 
-#loader div {
+#loader-bars {
+  display: flex; /* Keep the loader bars in a row */
+}
+
+#loader-bars div {
   background-color: #C93131;
   height: 40px;
   width: 10px;
-  margin: 2px;
+  margin: 0 2px; /* Horizontal spacing between bars */
   border-radius: 2px;
-  display: inline-block;
   animation: loaderAnimation 1.8s infinite ease-in-out;
 }
 
-#loader .rect2 {
+#loader-bars .rect2 {
   animation-delay: -1.6s;
 }
 
-#loader .rect3 {
+#loader-bars .rect3 {
   animation-delay: -1.4s;
 }
 
-#loader .rect4 {
+#loader-bars .rect4 {
   animation-delay: -1.2s;
 }
 
-#loader .rect5 {
+#loader-bars .rect5 {
   animation-delay: -1.0s;
 }
 
@@ -62,11 +65,12 @@ body, html {
   pointer-events: none;
 }
 
-/* Styling for random text */
+/* Styling for random text below the loader */
 #random-text {
-  margin-top: 20px; /* Space between the loader and text */
+  margin-top: 20px; /* Space between loader and text */
   text-align: center;
-  color: #fff; /* White text */
-  font-size: 16px; /* Adjust the size */
-  opacity: 0.8; /* Slight transparency for a subtle effect */
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold; /* Bold the text */
+  opacity: 0.8; /* Slight transparency for subtle effect */
 }
