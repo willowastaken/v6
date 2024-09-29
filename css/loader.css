@@ -8,26 +8,27 @@ body, html {
 }
 
 #loader {
-  position: fixed; 
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   display: flex;
+  flex-direction: column; /* Add this to position the loader and text vertically */
   justify-content: center;
   align-items: center;
   background-color: #111111;
   z-index: 9999;
-  transition: opacity 0.5s ease-out; 
+  transition: opacity 0.5s ease-out;
 }
 
 #loader div {
   background-color: #C93131;
-  height: 40px; 
-  width: 10px; 
+  height: 40px;
+  width: 10px;
   margin: 2px;
-  border-radius: 2px; 
-  animation: loaderAnimation 1.8s infinite ease-in-out; 
+  border-radius: 2px;
+  animation: loaderAnimation 1.8s infinite ease-in-out;
 }
 
 #loader .rect2 {
@@ -47,7 +48,7 @@ body, html {
 }
 
 @keyframes loaderAnimation {
-  0%, 40%, 100% { transform: scaleY(0.4); }  
+  0%, 40%, 100% { transform: scaleY(0.4); }
   20% { transform: scaleY(1.0); }
 }
 
@@ -56,6 +57,16 @@ body, html {
 }
 
 .fade-out {
-  opacity: 0; 
-  pointer-events: none; 
+  opacity: 0;
+  pointer-events: none;
 }
+
+/* New styles for random text below the loader */
+#random-text {
+  margin-top: 20px; /* Space between loader and text */
+  text-align: center;
+  color: #fff; /* Text color */
+  font-size: 16px; /* Adjust the font size */
+  opacity: 0.8; /* Slight transparency for a softer effect */
+}
+
