@@ -16,17 +16,19 @@ document.addEventListener("DOMContentLoaded", function() {
     // Select a random text from the array
     const randomText = texts[Math.floor(Math.random() * texts.length)];
 
-    // Create a new <p> element and set its content to the random text
+    // Dynamically create the <p> element for random text
     const randomTextElement = document.createElement('p');
     randomTextElement.textContent = randomText;
-    randomTextElement.id = 'random-text'; // Assign an ID to the <p> for styling
+    randomTextElement.id = 'random-text';  // Give it an ID for styling
 
-    // Append the <p> element to the loader
+    // Append the randomTextElement to the loader
     const loader = document.getElementById('loader');
     loader.appendChild(randomTextElement);
 
+    // Add text after the loader bars have loaded
     window.addEventListener('load', function() {
         setTimeout(function() {
+            const loader = document.getElementById('loader');
             loader.classList.add('fade-out');
 
             loader.addEventListener('animationend', function() {
@@ -36,3 +38,4 @@ document.addEventListener("DOMContentLoaded", function() {
         }, 1000);
     });
 });
+
