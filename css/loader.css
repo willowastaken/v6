@@ -19,7 +19,7 @@ body, html {
   background-color: #111111;
   z-index: 9999;
   transition: opacity 0.5s ease-out;
-  flex-direction: column; /* Ensure text appears below the loader */
+  flex-direction: column; /* Ensures text is below the loader */
 }
 
 #loader-bars {
@@ -30,26 +30,15 @@ body, html {
   background-color: #C93131;
   height: 40px;
   width: 10px;
-  margin: 0 2px; /* Horizontal spacing between bars */
+  margin: 0 2px;
   border-radius: 2px;
   animation: loaderAnimation 1.8s infinite ease-in-out;
 }
 
-#loader-bars .rect2 {
-  animation-delay: -1.6s;
-}
-
-#loader-bars .rect3 {
-  animation-delay: -1.4s;
-}
-
-#loader-bars .rect4 {
-  animation-delay: -1.2s;
-}
-
-#loader-bars .rect5 {
-  animation-delay: -1.0s;
-}
+#loader-bars .rect2 { animation-delay: -1.6s; }
+#loader-bars .rect3 { animation-delay: -1.4s; }
+#loader-bars .rect4 { animation-delay: -1.2s; }
+#loader-bars .rect5 { animation-delay: -1.0s; }
 
 @keyframes loaderAnimation {
   0%, 40%, 100% { transform: scaleY(0.4); }
@@ -65,12 +54,11 @@ body, html {
   pointer-events: none;
 }
 
-/* Styling for random text below the loader */
 #random-text {
   margin-top: 20px; /* Space between loader and text */
   text-align: center;
   color: #fff;
   font-size: 16px;
-  font-weight: bold; /* Bold the text */
-  opacity: 0.8; /* Slight transparency for subtle effect */
+  font-weight: bold; /* Bold text */
+  opacity: 0.8;
 }
