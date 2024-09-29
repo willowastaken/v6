@@ -1,23 +1,42 @@
 document.addEventListener("DOMContentLoaded", function() {
-
     const texts = [
-        "Loading the best experience...",
-        "Preparing your content...",
-        "Almost there...",
-        "Hang tight, we're setting things up...",
-        "Just a moment, making everything perfect...",
-        "Optimizing your journey...",
-        "Getting ready for launch...",
-        "Final touches are being made...",
-        "Patience is a virtue, good things are coming...",
-        "Hold on tight, magic is happening..."
+     "Bringing your adventure alive...",
+     "Setting up your experience...",
+     "Loading awesome features...",
+     "Preparing a smooth journey...",
+     "Hang tight, almost ready!",
+     "Crafting something special...",
+     "Loading your favorites...",
+     "Just a moment, please wait...",
+     "Finalizing your setup...",
+     "Launching great content...",
+     "Jeremy Is Washed On GD...",
+     "Making things just right...",
+     "Unlocking your experience...",
+     "Hang on, it’s almost done!",
+     "Loading your custom settings...",
+     "Building your experience...",
+     "Just a moment, hang tight...",
+     "Getting everything in place...",
+     "Almost there, stay tuned...",
+     "Preparing your next adventure...",
+     "We're on it, just a sec...",
+     "Loading the latest updates...",
+     "Hang tight, enjoy the wait!",
+     "Crafting your unique journey...",
+     "Almost ready to dive in!",
+     "Creating your experience...",
+     "Loading new possibilities...",
+     "Getting ready for your fun...",
+     "Hang on, magic in progress...",
+     "Just a moment, good things!"
     ];
 
     const randomText = texts[Math.floor(Math.random() * texts.length)];
 
     const randomTextElement = document.createElement('p');
     randomTextElement.textContent = randomText;
-    randomTextElement.id = 'random-text'; 
+    randomTextElement.id = 'random-text';
 
     const loader = document.getElementById('loader');
     loader.appendChild(randomTextElement);
