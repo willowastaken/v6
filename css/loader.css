@@ -29,7 +29,6 @@ body, html {
   margin: 2px;
   border-radius: 2px; 
   animation: loaderAnimation 1.8s infinite ease-in-out; 
-  display: inline-block; /* Keep the bars aligned horizontally */
 }
 
 #loader .rect2 {
