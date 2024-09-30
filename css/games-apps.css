@@ -122,3 +122,12 @@ opacity: 1;
 .box:hover .box-image {
 filter: brightness(80%); 
 }
+
+.fire-icon {
+  position: absolute;
+  top: 8px; 
+  left: 8px; 
+  font-size: 24px;
+  color: #ff4500;
+  z-index: 2;
+}
