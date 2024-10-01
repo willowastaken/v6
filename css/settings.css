@@ -359,25 +359,62 @@ opacity: 1;
 #notification {
     position: fixed;
     top: 20px;
-    right: -300px; 
-    background-color: #28a745;
+    right: -400px; 
+    background-color: #1db954; 
     color: #fff;
-    padding: 15px 25px;
-    border-radius: 8px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    padding: 12px 20px; 
+    border-radius: 6px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25), 0 0 20px rgba(0, 0, 0, 0.2);
     font-family: 'Roboto', sans-serif;
-    font-size: 16px;
+    font-size: 17px;
     font-weight: bold;
     z-index: 1000;
-    transition: transform 0.5s ease, right 0.5s ease;
+    transition: right 0.6s ease, opacity 0.6s ease;
+    opacity: 0; 
+    display: flex; 
+    align-items: center;
+    gap: 10px; 
 }
 
+#notification.show {
+    right: 20px;
+    opacity: 1; 
+}
 
+#notification.hide {
+    right: -400px; 
+    opacity: 0; 
+}
 
 #notification.shake {
-    animation: rockingShake 0.5s ease-in-out;
+    animation: rockingShake 0.5s ease-in-out, fadeInOut 2.5s linear forwards; 
 }
 
+@keyframes rockingShake {
+    0% { transform: translateX(0); }
+    10% { transform: translateX(-5px); }
+    20% { transform: translateX(5px); }
+    30% { transform: translateX(-4px); }
+    40% { transform: translateX(4px); }
+    50% { transform: translateX(-3px); }
+    60% { transform: translateX(3px); }
+    70% { transform: translateX(-2px); }
+    80% { transform: translateX(2px); }
+    90% { transform: translateX(-1px); }
+    100% { transform: translateX(0); }
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+#notification::before {
+    content: "⚠"; 
+    font-size: 18px;
+    display: inline-block;
+}
   #bareSelect {
     border: 2px solid #242222;
     background-color: #111111;
