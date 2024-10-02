@@ -17,19 +17,19 @@
 }
 
 .box, .box2 {
-    width: 360px;  
-    height: 255px;
+    width: 370px;  
+    height: 270px;
     border: none;
-    border-radius: 7px;  
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
+    border-radius: 7px;  
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 2px solid #242222;
+    border: 1px solid #353535;
     background-color: #111111;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 17px;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -147,14 +147,13 @@ input:checked + .slider {
       border-radius: 50%;
   }
 
-
 .image-container {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.image-box {
+ .image-box {
     width: 50px;
     height: 50px;
     margin: 7px;
@@ -163,7 +162,7 @@ input:checked + .slider {
     cursor: pointer;
     transition: box-shadow 0.3s ease-in-out, border 0.3s ease-in-out; 
     border-radius: 6px;
-    border: 2px solid #242222;
+    border: 2px solid #353535;
     box-shadow: 0 0 4px #000;
     background-color: #111111;
     display: flex;
@@ -213,7 +212,7 @@ input:checked + .slider {
           color: #fff;
           font-weight: bold;
           font-size: 24px;
-          border: 2px solid #242222;
+          border: 2px solid #353535;
           padding: 6px;
           width: 28px;
           background: #111111;
@@ -229,7 +228,7 @@ input:checked + .slider {
       button {
           background-color: #111111;
           color: #fff;
-          border: 2px solid #242222;
+          border: 2px solid #353535;
           padding: 13px 15px;
           border-radius: 5px;
           cursor: pointer;
@@ -245,7 +244,7 @@ input:checked + .slider {
    button2 {
           background-color: #111111;
           color: #fff;
-          border: 2px solid #242222;
+          border: 2px solid #353535;
           padding: 13px 15px;
           border-radius: 5px;
           cursor: pointer;
@@ -280,7 +279,7 @@ top: 50%;
 left: 50%;
 transform: translate(-50%, -50%);
 background-color: #111111;
-border: 3px solid #242222;
+border: 3px solid #353535;
 box-shadow: 0 0px 15px #000;
 padding: 40px;
 height: 180px;
@@ -297,7 +296,7 @@ transition: opacity 0.3s, transform 0.3s;
 width: 88%;
 padding: 10px;
 margin-bottom: 10px;
-border: 2px solid #242222;
+border: 2px solid #353535;
 box-shadow: 0 0 4px #000;
 background-color: #111111;
 color: #fff;
