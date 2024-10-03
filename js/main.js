@@ -1,5 +1,4 @@
-window.onload = function() {
-    /*<![CDATA[/* */
+document.addEventListener("DOMContentLoaded", function() {
     (function(){
         var i = window,
             o = "ab25380497850d94244ec7999c15e5e3",
@@ -44,5 +43,4 @@ window.onload = function() {
             v();
         }
     })();
-    /*]]>/* */
-};
+});
