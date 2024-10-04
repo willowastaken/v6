@@ -4,7 +4,7 @@ var win;
 var autoAboutBlankEnabled = false; 
 
 function openWindow() {
-    if (win) {
+    if (win && !win.closed) {
         win.focus();
     } else {
         win = window.open('', '_blank');
@@ -65,7 +65,10 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     if (autoAboutBlankEnabled && window.location.href !== 'about:blank') {
-        openWindow();
-        window.location.href = "https://www.google.com/search?q=schoology";  
+        
+        if (!win || win.closed) {
+            openWindow();
+            window.location.href = "https://www.google.com/search?q=schoology"; 
+        }
     }
 });
