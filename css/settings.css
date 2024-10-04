@@ -10,18 +10,18 @@
 
 .box-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 15px; 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 17px; 
     justify-items: center; 
     margin: 0 auto;
 }
 
 .box, .box2 {
-    width: 370px;  
-    height: 270px;
+    width: 470px;  
+    height: 240px;
     border: none;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
-    border-radius: 7px;  
+    border-radius: 10px;  
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid #353535;
     background-color: #111111;
@@ -29,7 +29,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 17px;
+    padding: 5px;
     text-align: center;
     position: relative;
     overflow: hidden;
