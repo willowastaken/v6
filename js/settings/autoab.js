@@ -19,6 +19,10 @@ function openWindow() {
     }
 }
 
+if (window.location.href === 'about:blank') {
+    autoAboutBlankEnabled = false; 
+}
+
 if (localStorage.getItem('autoAboutBlankEnabled') === 'true') {
     autoAboutBlankEnabled = true; 
 }
@@ -62,6 +66,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (autoAboutBlankEnabled && window.location.href !== 'about:blank') {
         openWindow();
-        window.location.href = "https://www.google.com/search?q=schoology";
+        window.location.href = "https://www.google.com/search?q=schoology";  
     }
 });
