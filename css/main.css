@@ -301,7 +301,7 @@ b {
     border-radius: 50%; 
     width: 300px;
     height: 300px;
-    filter: blur(90px); 
+    filter: blur(80px); 
 }
 
 .fog:nth-child(1) {
