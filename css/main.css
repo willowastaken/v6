@@ -297,7 +297,7 @@ b {
 .fog {
     position: absolute;
     background-color: #C93131;
-    opacity: 0.20; 
+    opacity: 0.10; 
     border-radius: 50%; 
     width: 300px;
     height: 300px;
