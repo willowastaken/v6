@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
      "Crafting your unique journey",
      "Almost ready to dive in!",
      "Creating your experience!",
-     "Loading endless skibidi toilets@",
+     "Loading endless skibidi toilets!",
      "Getting ready for your fun!",
      "Hang on, magic in progress!",
      "Just a moment, good things!"
