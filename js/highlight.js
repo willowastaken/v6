@@ -1,7 +1,7 @@
 const style = document.createElement('style');
 style.innerHTML = `
     ::selection {
-        background-color: #b03232;
+        background-color: #C93131;
         color: white; 
     }
 `;
