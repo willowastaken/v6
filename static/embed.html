@@ -14,22 +14,22 @@
     <meta name="description" content="The Next Generation Of Unblocked Sites...">
     <meta property="og:description" content="The Next Generation Of Unblocked Sites...">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/all.css">
-    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&amp;display=swap" rel="stylesheet">
-   
-    <style>
-        body {
-            background-color: #111111;
-    color: #ffffff;
-    font-family: 'Be Vietnam Pro', sans-serif;
-    margin: 0;
-    padding: 0;
-    padding-left: 60px;
-        }
+        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+        <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/all.css">
+        <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&amp;display=swap" rel="stylesheet">
+    
+<style>
+ body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #0F0F0F; 
+  color: #fff;
+  font-family: 'Be Vietnam Pro', sans-serif;
+}
 
-  #loader {
+#loader {
   position: fixed; 
   top: 0;
   left: 0;
@@ -39,29 +39,27 @@
   justify-content: center;
   align-items: center;
   background-color: #111111; 
-  z-index: 9999;
-  transition: opacity 0.5s ease-out; 
 }
 
 #loader div {
-  background-color: rgba(201, 49, 49, 0.5); 
-  height: 20px; 
-  width: 20px; 
-  border-radius: 1px;
-  margin: 0 4px; 
-  transition: transform 0.2s ease, background-color 0.2s ease;
+  background-color: rgba(201, 49, 49, 0.5);
+            height: 20px;
+            width: 20px;
+            border-radius: 1px;
+            margin: 0 4px;
+            animation: loaderAnimation 1.2s infinite;
 }
 
-@keyframes loaderAnimation {
-  0%, 100% {
-    transform: scale(1); 
-    background-color: rgba(201, 49, 49, 0.5);
-  }
-  50% {
-    transform: scale(1.1); 
-    background-color: #C93131; 
-  }
-}
+     @keyframes loaderAnimation {
+            0%, 100% {
+                transform: scale(1);
+                background-color: rgba(201, 49, 49, 0.5);
+            }
+            50% {
+                transform: scale(1.1);
+                background-color: #C93131;
+            }
+        }
 
 #loader .rect1 {
   animation: loaderAnimation 1.2s infinite 0s; 
@@ -78,7 +76,7 @@
 #loader .rect5 {
   animation: loaderAnimation 1.2s infinite 0.8s; 
 }
-        
+
 #content {
   display: none;
 }
@@ -88,15 +86,30 @@
   pointer-events: none; 
 }
 
-.center {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-          font-family: 'Be Vietnam Pro', sans-serif;
+#random-text {
+  position: fixed;
+  bottom: 39%; 
+  transform: translateX(-50%); 
+  width: auto; 
+  text-align: center; 
+  color: #d6d2d2;
+  font-size: 16px;
+  font-weight: bold; 
+  opacity: 0; 
+  animation: fadeInSlideUp 1s forwards; 
+}
+
+@keyframes fadeInSlideUp {
+  0% {
+    opacity: 0; 
+    transform: translateY(10px); 
   }
+  100% {
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
     </style>
 </head>
 <body>
@@ -110,6 +123,63 @@
     </div>
 </div>
 </body>
+  
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const texts = [
+     "Bringing your adventure alive.",
+     "Join The Discord, dsc.gg/plexilenetwork",
+     "Made, Hosted, Created by willo",
+     "Preparing a smooth journey!",
+     "Hang tight, almost ready!",
+     "Crafting something special!",
+     "i like pee c'z",
+     "Just a moment, please wait!",
+     "Eryx is a MONKEY who cant even use Jujutsu",
+     "Launching great content!",
+     "Jeremy Is Washed On GD",
+     "Making things just right!",
+     "Unblocking your experience!",
+     "Brody & Cayden are Pokemon Go Nerds",
+     "Loading your custom settings!",
+     "Brody wants to tap Liliana",
+     "Just a moment, hang tight!",
+     "Getting everything in place!",
+     "Almost there, stay tuned!",
+     "Hakari Mains Needa Hop Off & Shower",
+     "Midkuna, Fraudkuna, Poukuna",
+     "Loading the latest updates!",
+     "Hang tight, enjoy the wait!",
+     "Crafting your unique journey",
+     "Almost ready to dive in!",
+     "Creating your experience!",
+     "Loading endless skibidi toilets!",
+     "Getting ready for your fun!",
+     "Hang on, magic in progress!",
+     "Just a moment, good things!"
+    ];
+
+    const randomText = texts[Math.floor(Math.random() * texts.length)];
+
+    const randomTextElement = document.createElement('p');
+    randomTextElement.textContent = randomText;
+    randomTextElement.id = 'random-text';
+
+    const loader = document.getElementById('loader');
+    loader.appendChild(randomTextElement);
+
+    window.addEventListener('load', function() {
+        setTimeout(function() {
+            const loader = document.getElementById('loader');
+
+            loader.addEventListener('transitionend', function() {
+                loader.style.display = 'none';
+                document.getElementById('content').style.display = 'block';
+            });
+        }, 1000);
+    });
+});  
+</script>
 <script src="uv/uv.bundle.js"></script>
 <script src="uv/uv.config.js"></script>
 <script src="register-sw.js"></script>
